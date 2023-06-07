@@ -1,5 +1,3 @@
-log.txt
-traceback.txt
+*.txt
 *.log
 *.rpyc
-.vscode
