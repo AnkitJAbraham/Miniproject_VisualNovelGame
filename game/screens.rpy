@@ -268,6 +268,7 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
+            #textbutton _("Levels") action Levels()
 
         else:
 
@@ -276,6 +277,8 @@ screen navigation():
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
+
+        textbutton _("Levels") action ShowMenu("levels")
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
@@ -315,6 +318,7 @@ style navigation_button_text:
 ##
 ## Used to display the main menu when Ren'Py starts.
 ##
+
 
 screen main_menu():
 

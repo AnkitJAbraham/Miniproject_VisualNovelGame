@@ -73,5 +73,72 @@ label visit_shylock:
     show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    antonio "I seek a loan, Shylock. I will provide you a pound of my flesh as collateral, and if I fail to repay, you may take it."
-    shylock "Very well, Antonio. We shall draw up the bond. But beware, if you default, the bond shall be enforced."
+    antonio "I seek a loan Shylock, of three thousand ducats."
+
+    shylock "Three thousand ducats, well."
+
+    bassanio "Yes, sir, for three months."
+
+    shylock "For three months, well."
+
+    bassanio "Antonio will be the guarantor of the loan."
+
+    shylock "Three thousand ducats for three months, and Antonio will be bound to guarantee the loan.
+    Despite risks, he is a sufficient guarantor for the loan."
+
+    shylock "Antonio do you accept these terms? You usually don't lend or borrow with interest do you?And as interest I have decided make it a piece of
+    flesh near your heart, I take my interests seriously unlike you."
+
+    $shylock_satisfaction=0
+    menu:
+        "Agree to all of his terms":
+            $shylock_satisfaction+=1
+            antonio "Shylock, I normally don't lend or borrow money with interest, but in
+            order to help my needy friend, I'll break my custom.Even if it means a
+            piece of flesh, I am certain I would have made four times that amount
+            anyway by that time."
+
+        "Agree to his terms but decline the interest":
+            antonio "Shylock, I normally don't lend or borrow money with interest, I am
+            confident that my ships will bring me my fortune back and that an
+            interest will not be necessary. I don't wish to pay you interest
+            Shylock.I also don't want to risk my life for bassanio."
+
+    shylock "You are a Christian who lends out money without charging interest,
+    forcing the merchant to lower their interest rates. You hate Jews and
+    speak badly of them.Are you willing to collect the rest of the amount
+    from Tubal the wealthy Jew?I can only provide you with half the
+    amount now."
+
+    menu:
+        "Agree to collect rest of the loan from Tubal":
+            $shylock_satisfaction+=1
+            antonio "Sure, why not? I'll agree to such a deal, and I'll admit there is much
+            kindness in Jews."
+
+        "Demand the entire loan from Shylock":
+            antonio "My religious inclinations are strong Shylock,and Tubal is a fanatical
+            Jew. I seek the entire amount from you or we shall seek some other
+            way."
+
+    shylock "What if you have ill intent, and try to harm me to not pay off the interest?"
+    menu:
+        "Sign a contract to reassure him":
+            $shylock_satisfaction+=1
+            antonio "How can you think of me like that Shylock! I am a law abiding
+            Christian who would never do such things. If you have any such
+            suspicions about me then lets sign a contract that ensures the interest
+            is paid whether you are dead or alive to your closest relative."
+
+        "Proceed without signing any contracts":
+            antonio "How can you think of me like that Shylock! I am a law abiding
+            Christian who would never do such things. If you have any such
+            suspicions about me then you are misinformed."
+    if(shylock_satisfaction<3):
+        shylock "Antonio you have not met my requirements.You shall not be
+        guaranteed the loan.I thought your friendship with bassanio meant
+        more to you."
+    else:
+        shylock "Very well, Antonio. We shall draw up the bond. But beware, if you
+        default, the bond shall be enforced."
+                
