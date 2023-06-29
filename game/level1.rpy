@@ -9,7 +9,7 @@ label level1:
 
     "He has a friend named Bassanio who was more like his brother.He would do anything for Bassanio."
 
-    "The story begins with Antonio meeting Bassanio at the Venice harbour"
+    "The story begins with Antonio meeting Bassanio at the Venice market"
     
     "Enter Antonio"
     show antonio at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
@@ -55,10 +55,116 @@ label help_bassanio:
 label visit_valentino:
     stop music
     play music "audio/hopeful_music.opus"
-    return
+    scene bg valentino_office_day
+    "antonio and bassanio visit valentino the money lender's office"
+    show antonio at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    antonio "Valentino I come to you to ask for a loan of 3000 ducats."
+    show valentino at center with fade
+    valentino "I am sorry Antonio but my son is ill and is in need of a surgery. My
+    finances are tied up in that."
+    scene bg pure_black
+    stop music
+    "Unable to secure the loan from Valentino,Antonio and Bassanio return to the market to discuss other options"
+    scene bg streets_of_venice
+    show antonio at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    bassanio "What now?...."
+    bassanio "Shall we go visit Shylock? We don't seem to have many options now"
+    menu:
+        "visit shylock":
+            antonio "Shylock is known for his shrewd behaviour and on top of that i haven't been in good terms with him
+            but we shall go visit him as we don't have any other option now"
+            jump visit_shylock
+
+        "Decline":
+            antonio "Bassanio my friend, if it's Shylock we have to visit then i must decline"
+            return
 
 
 label visit_shylock:
+    stop music
+    scene bg shylock_house_outside
+
+    "Antonio and Bassanio reach Shylock's house"
+
+    show antonio_invert at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    show shylock_guard at Position(xpos=0.9,xanchor=0.9,ypos=0.9,yanchor=0.9) with moveinright:
+        yoffset 100
+
+    shylock_guard "Halt!"
+    shylock_guard "What do we have here? Antonio and Bassanio, I've heard tales of your dealings with Shylock. 
+    What brings you to his doorstep today? Trying to swindle him again, are we?"
+
+    bassanio "We've come to him seeking a loan"
+
+    shylock_guard "A loan, you say? How convenient! You think Shylock would be foolish enough to lend money to the likes of you? 
+    You've already milked him dry, haven't you? Well, I have news for you. Shylock isn't in the business of throwing money at those who can't pay their debts."
+
+    menu:
+        "Bribe":
+            antonio "Guard, I understand the importance of your role here. 
+            Allow me to propose an alternative arrangement. 
+            If we were to provide you with a suitable bribe, would you consider granting us access to see Shylock?"
+
+            "The guard glances around discreetly, ensuring no one else is listening, and then leans in closer to Antonio."
+
+            shylock_guard "Alright, Antonio, I see your offer. Money has a way of making things happen. Show me what you have in mind."
+
+            "Antonio discreetly passes a pouch of coins to the guard, ensuring that their transaction remains concealed."
+            antonio "Here, as promised. This should be sufficient to secure our access to Shylock."
+
+            "Coins available with antonio before paying the guard = [wallet]"
+            $wallet-=1000
+
+            "Coins remaining with antonio = [wallet]"
+
+        "Challenge":
+            antonio "Guard, I propose a challenge to settle this matter.
+            If I can best you in an intellectual game of your choosing, will you then grant us access to see Shylock?"
+
+            shylock_guard "Hah! An intellectual game, you say? Fine, I accept your challenge. 
+            But don't think for a moment that you can outwit me"
+
+            shylock_guard "Here's the puzzle I propose:"
+
+            scene bg fibonacci_squares
+            "The guard reveals a grid of squares"
+
+            shylock_guard "As you can see, each square is placed adjacent to the previous two squares, creating a spiral pattern."
+            shylock_guard "Your task is to determine the total number of squares in the grid when it reaches a certain point. 
+            Tell me, how many squares would be present when the grid reaches the 12th iteration?"
+
+            
+            $ answer=renpy.input("what is the 12th iteration of the series")
+
+            scene bg shylock_house_outside
+            show antonio_invert at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) 
+            show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) 
+            show shylock_guard at Position(xpos=0.9,xanchor=0.9,ypos=0.9,yanchor=0.9)
+
+            if(answer=="89"):
+                shylock_guard "Impressive, you got the answer right."
+                shylock_guard "Hmph, I suppose you have proven yourselves to some extent. Very well, you may enter. 
+                But remember, the real challenges lie ahead."
+            else:
+                shylock_guard "Pathetic! You couldn't even answer a simple question correctly. It seems your intellect is lacking."
+                antonio "We apologize for our mistake. We misunderstood the puzzle."
+                bassanio "Indeed, we made an error in our calculations. We appreciate your patience."
+                shylock_guard "Patience? I have none for incompetence. It's clear that you are unworthy of proceeding. Leave this place immediately."
+                scene bg game_over
+                "Game over"
+                return
+
+
     stop music
     play music "audio/hopeful_music.opus"
 
@@ -138,7 +244,42 @@ label visit_shylock:
         shylock "Antonio you have not met my requirements.You shall not be
         guaranteed the loan.I thought your friendship with bassanio meant
         more to you."
+        return
+        
     else:
         shylock "Very well, Antonio. We shall draw up the bond. But beware, if you
         default, the bond shall be enforced."
+        jump got_loan_from_shylock
+
+label got_loan_from_shylock:
+    stop music
+    scene bg pure_black
+    "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
+    Nerissa discuss the intriguing ‘lottery’ that Portia’s father devised
+    before his death."
+    scene bg portia_house_belmont_day
+
+    show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    nerissa "Portia,your father has set up a lottery where your suitors will have to
+    choose between chests of gold, silver, and lead, and whoever chooses
+    the right one will win you as a wife."
+    
+    nerissa "I am sure whoever chooses correctly will be a man who will love you well. But what are your
+    feelings toward the princely suitors who have already paid you visits?"
+
+    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    portia "The prince of naples talkes about his horses all the time and I'm
+    worried his mother had an affair with a blacksmith."
+    portia "Then there is Count Palatine,he does nothing but frown."
+    portia "I'd rather be married to a skull with a bone in its mouth than to either of these men!"
+    nerissa "Do you remember, lady, from your father's time in Venice, a scholar
+    and soldier who came here along with the Marquess of Montferrat?"
+    portia "Yes, yes, it was Bassanio—I think that was his name."
+    nerissa "That's right, madam. Of any man my foolish eyes have ever seen, he
+    was the one most deserving of a beautiful lady."
+    jump level2
+    
                 
