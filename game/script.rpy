@@ -11,6 +11,8 @@ define portia = Character(_("Portia"), color="#a3297b")
 
 define moroccan_prince= Character(_("Prince of Morocco"), color="#b16610a4")
 
+define arragon_prince= Character(_("Prince of Arragon"), color="#1612e9a4")
+
 
 label start:
     $ _skipping=False

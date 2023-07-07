@@ -1,8 +1,36 @@
 label level2:
+    stop music
+    scene bg pure_black
+    "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
+    Nerissa discuss the intriguing ‘lottery’ that Portia’s father devised
+    before his death."
+    scene bg portia_house_belmont_day
+
+    show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    nerissa "Portia,your father has set up a lottery where your suitors will have to
+    choose between chests of gold, silver, and lead, and whoever chooses
+    the right one will win you as a wife."
+    
+    nerissa "I am sure whoever chooses correctly will be a man who will love you well. But what are your
+    feelings toward the princely suitors who have already paid you visits?"
+
+    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    portia "The prince of naples talkes about his horses all the time and I'm
+    worried his mother had an affair with a blacksmith."
+    portia "Then there is Count Palatine, he does nothing but frown."
+    portia "I'd rather be married to a skull with a bone in its mouth than to either of these men!"
+    nerissa "Do you remember, lady, from your father's time in Venice, a scholar
+    and soldier who came here along with the Marquess of Montferrat?"
+    portia "Yes, yes, it was Bassanio — I think that was his name."
+    nerissa "That's right, madam. Of any man my foolish eyes have ever seen, he
+    was the one most deserving of a beautiful lady."
     hide portia
     hide nerissa
     scene bg portia_house_belmont_day
-    "Portia and Nerissa are interrupted by trupets "
+    "Portia and Nerissa are interrupted by trumpets "
     "The Prince of Morocco, a dark-skinned African dressed in white, and
     three or four followers enter portia's house to take part in the lottery"
 
@@ -45,10 +73,98 @@ label level2:
 
     moroccan_prince "I promise. Come on, bring me to the caskets."
 
+    hide moroccan_prince
+    hide portia_inverted
+
+    "Trumpets play. The Prince of Arragon and his attendants enter interrupting Portia and the Moroccan prince"
+
+    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    portia "Ah, the Prince of Arragon has arrived. Welcome to my house, noble prince. You have come to participate in the lottery, I presume?"
+
+    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    arragon_prince "Indeed, fair Portia. I have graced this occasion with my presence, fully confident in my ability to choose wisely."
+
+    hide portia_inverted
+
+    show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    moroccan_prince "Greetings, Prince of Arragon. It seems we have another contender for the prize. May the best man win."
+
+    arragon_prince "The best man? That title belongs to me, Moroccan prince. I assure you, I have already bested many in my endeavors."
+
+    hide moroccan_prince_inverted
+
+    hide arragon_prince
+
+    "As the Moroccan prince and the Prince of Arragon are engaged in conversation, 
+    they are interrupted by the sudden arrival of Bassanio at Portia's house to participate in her father's lottery."
+
+
+    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    portia "Gentlemen, it seems we have another guest. Bassanio, welcome! Are you here to partake in the lottery as well?"
+
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
     
+    bassanio "Indeed, fair Portia. I have come to take my chance, hoping to win not only your hand 
+    but also the honor and privilege of being your husband."
+    
+    hide portia_inverted
+
+    show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    moroccan_prince "Ah, another competitor joins the fray. Bassanio, may I extend my greetings and wish you luck in your endeavor."
+
+    hide moroccan_prince_inverted
+    
+    show arragon_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    arragon_prince "Bassanio, is it? I trust you are aware of the caliber of competition present here. Your chances of success appear quite slim."
+
+    bassanio "Thank you for your kind words, Prince of Arragon. I am fully aware of the challenges that lie ahead, but I am here with confidence and determination"
+
+    hide arragon_prince_inverted
+
+    hide bassanio
+
+    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    portia  "Gentlemen, to ensure fairness and transparency, I invite all three of you to accompany me to 
+    the temple where the caskets are kept. It is there that you shall make your choices."
+
+    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    moroccan_prince "An excellent suggestion, Portia. Let us proceed to the temple and put an end to this suspense."
+
+    hide moroccan_prince
+
+    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    arragon_prince "Very well, Portia. I am eager to see the caskets and make my choice. Lead the way."
+
+    hide arragon_prince
+
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 100
+
+    bassanio "I am ready to accompany you to the temple, Portia. May the truth be revealed and fate guide us in our decisions."
+
+
     scene bg pure_black
 
-    "Portia accompanies the Moroccan prince to the temple where the caskets are located."
+    "Portia accompanies the Moroccan prince,the prince of Arragon and Bassanio to the temple where the caskets are located."
 
     scene bg caskets
 
@@ -65,128 +181,64 @@ label level2:
     portia "One of them has my picture inside, Prince. If you choose that one then
     I am yours"
 
+    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    moroccan_prince "This inscription speaks to me. It shall guide my choice."
+
+    hide moroccan_prince
+
+    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    arragon_prince "I have studied the inscriptions thoroughly. I am confident in my selection."
+
+    hide arragon_prince
+
+    "The prince of Arragon and the Moroccan prince have both made their choices."
+
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+
+    bassanio "The moment of truth has arrived. I trust my heart's instincts to lead me to the right casket."
+
+    "Now choose one among the caskets as Bassanio"
+
+    hide bassanio
+    
     call screen caskets
 
-label gold_morocco:
-    "The prince chooses the Golden casket"
+label gold_bassanio:
+    "Bassanio chooses the Golden casket"
 
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    moroccan_prince "May a divine presence guide me in this momentous choice! Could her
-    heavenly picture be in the plain lead casket? Unthinkable. Her beauty
-    deserves better. What about the silver casket? No, she deserves
-    nothing less than gold. Give me the key. I choose this one, hoping for
-    boundless joy!"
+    bassanio "Portia's beauty and grace shine like a golden sun, and my heart tells me to follow this path. I must trust my instincts and believe that true love lies within this golden casket."
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    return
+
+label silver_bassanio:
+    "Bassanio chooses the Silver casket"
+
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    portia "There, take it, Prince. And if my picture is within, then I am yours."
-
-    hide portia_inverted
-    hide moroccan_prince
-
-    "In the prince's dismay, he uncovers a skull containing a scroll within its eye socket.
-    The words inscribed upon it read: \"All that glitters is
-    not gold. Many have sacrificed their lives merely to admire superficial
-    appearances. Golden tombs hold nothing but decay.\""
-
-    
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    moroccan_prince " What...? This cannot be. Instead of the riches I anticipated, I find a stark reminder, a solemn lesson etched within these bones."
-    moroccan_prince "\"All that glitters is not gold.\" How profound! 
-    I realize now that appearances can deceive, and pursuing mere superficial beauty can lead to tragedy and emptiness. Golden tombs, filled with decay... It is a sobering revelation."
-
-    moroccan_prince "Regrettably, my
-    choice of casket has led to failure in pursuing Portia. Farewell,
-    passion, and hello to a desolate solitude. Goodbye, Portia. My heart is
-    heavy with sorrow, prompting a swift departure. This is how losers bid
-    their farewells."
-
-    hide moroccan_prince
-    "The Prince of Morocco and his attendants exit"
-
-    jump aragon
-
-label silver_morocco:
-    "The prince chooses the Silver casket"
-
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    moroccan_prince "The silver casket, a symbol of dignity and grace. Surely, within this choice lies the reward that matches my worth. 
+    bassanio "The silver casket, a symbol of dignity and grace. Surely, within this choice lies the reward that matches my worth. 
     Let us unveil the truth that awaits me."
 
-    "The prince opens the casket and sees the portrait of an idiot holding a message that reads 
-    \"He who chooses me will get as much as he deserves.\""
+    return
 
-    moroccan_prince "\"He who chooses me will get as much as he deserves.\" It appears I have been judged by my own actions.
-    This foolish portrayal serves as a stark reminder that one's choices dictate their outcomes. Have I not considered my worth or the consequences of my decisions?"
+label lead_bassanio:
+    "Bassanio chooses the Lead casket"
 
-    moroccan_prince "This outcome forces me to reflect upon the true measure of worthiness.
-    Material possessions and external appearances hold little value compared to one's character and integrity. It is a humbling lesson to learn."
-
-    moroccan_prince "Regrettably, my
-    choice of casket has led to failure in pursuing Portia. Farewell,
-    passion, and hello to a desolate solitude. Goodbye, Portia. My heart is
-    heavy with sorrow, prompting a swift departure. This is how losers bid
-    their farewells."
-
-    hide moroccan_prince
-    "The Prince of Morocco and his attendants exit"
-
-    jump aragon
-
-
-label lead_morocco:
-    "The prince chooses the Lead casket"
-
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    moroccan_prince "The humble lead casket, often overlooked in favor of its more opulent counterparts. 
+    bassanio "The humble lead casket, often overlooked in favor of its more opulent counterparts. 
     Yet, there is an allure to its unassuming presence, as if it holds a hidden treasure of its own. Let me unlock its secrets."
 
-    "The moroccan prince opens the casket to find a portrait of Portia"
+    return
 
-    moroccan_prince "Portia, your portrait reveals a soul that surpasses material wealth. 
-    In choosing the lead casket, fate has granted me the most precious treasure—your image, the gateway to your heart."
-
-    moroccan_prince "I am filled with gratitude for this serendipitous outcome. 
-    I vow to cherish this portrait and honor the opportunity it has bestowed upon me.
-    With humility and devotion, I shall pursue a connection with Portia that transcends the superficial trappings of gold and silver."
-
-    scene bg pure_black
-
-    "Portia proceeds to marry the Moroccan prince"
-
-    scene bg game_over
-
-    "Game over"
-
-
-label aragon:
-
-    scene bg portia_house_belmont_day
-
-    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    portia "Good riddance. Close the curtains back up. I hope everyone of his
-    complexion will choose that cask."
-
-    "Nerissa and a servant enter."
-
-    show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    nerissa "Hurry, hurry, please. Close up the curtain right now. The Prince of
-    Aragon has sworn his oath and now comes to make his selection."
-
-    scene bg pure_black
-    "Trumpets play. The Prince of Arragon and his attendants enter"
 
     

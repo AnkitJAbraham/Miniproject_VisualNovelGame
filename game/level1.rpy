@@ -3,15 +3,15 @@ label level1:
     
     "The bustling city of Venice is alive with merchants, sailors, and locals going about their daily business."
 
-    "Antonio is a Noble man and money lender in the city of Venice"
+    "Antonio is a noble man, and money lender in the city of Venice"
 
     "He is liked by most of the people in the city, due to his kind nature of lending money at low interest rates"
 
-    "He has a friend named Bassanio who was more like his brother.He would do anything for Bassanio."
+    "He has a friend named Bassanio who was more like his brother. He would do anything for Bassanio."
 
     "The story begins with Antonio meeting Bassanio at the Venice market"
     
-    "Enter Antonio"
+    # "Enter Antonio"
     show antonio at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
     antonio "Bassanio, my friend, what troubles your mind today?"
@@ -56,7 +56,7 @@ label visit_valentino:
     stop music
     play music "audio/hopeful_music.opus"
     scene bg valentino_office_day
-    "antonio and bassanio visit valentino the money lender's office"
+    "Antonio and Bassanio visit Valentino the money lender's office"
     show antonio at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
     show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
@@ -252,34 +252,6 @@ label visit_shylock:
         jump got_loan_from_shylock
 
 label got_loan_from_shylock:
-    stop music
-    scene bg pure_black
-    "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
-    Nerissa discuss the intriguing ‘lottery’ that Portia’s father devised
-    before his death."
-    scene bg portia_house_belmont_day
-
-    show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-    nerissa "Portia,your father has set up a lottery where your suitors will have to
-    choose between chests of gold, silver, and lead, and whoever chooses
-    the right one will win you as a wife."
-    
-    nerissa "I am sure whoever chooses correctly will be a man who will love you well. But what are your
-    feelings toward the princely suitors who have already paid you visits?"
-
-    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    portia "The prince of naples talkes about his horses all the time and I'm
-    worried his mother had an affair with a blacksmith."
-    portia "Then there is Count Palatine,he does nothing but frown."
-    portia "I'd rather be married to a skull with a bone in its mouth than to either of these men!"
-    nerissa "Do you remember, lady, from your father's time in Venice, a scholar
-    and soldier who came here along with the Marquess of Montferrat?"
-    portia "Yes, yes, it was Bassanio—I think that was his name."
-    nerissa "That's right, madam. Of any man my foolish eyes have ever seen, he
-    was the one most deserving of a beautiful lady."
     jump level2
     
                 

@@ -529,43 +529,43 @@ screen about():
             hbox:
                 spacing 15
                 text _("Updated Character Art") style "about_small"
-                text _("")
+                text _("ChristopherJacob")
 
             hbox:
                 spacing 15
                 text _("Original Character Art") style "about_small"
-                text _("")
+                text _("Christopher Jacob")
 
             null height 15
 
             hbox:
                 spacing 15
                 text _("Updated Background Art") style "about_small"
-                text _("")
+                text _("Alwin Shibu")
 
             hbox:
                 spacing 15
                 text _("Original Background Art") style "about_small"
-                text _("")
+                text _("Alwin Shibu")
 
             null height 15
 
             hbox:
                 spacing 15
                 text _("Music By") style "about_small"
-                text _("")
+                text _("Alwin Shibu")
 
             null height 15
 
             hbox:
                 spacing 15
                 text _("Update Written By") style "about_small"
-                text _("")
+                text _("Ashwin Saji")
 
             hbox:
                 spacing 15
                 text _("Originally Written By ") style "about_small"
-                text _("")
+                text _("Ankit John")
 
 
             text _("\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]")
@@ -680,7 +680,7 @@ screen file_slots(title):
                     textbutton _("{#quick_page}Q") action FilePage("quick")
 
                 ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
+                for page in range(1,9):
                     textbutton "[page]" action FilePage(page)
 
                 textbutton _(">") action FilePageNext()

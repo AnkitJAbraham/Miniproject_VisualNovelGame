@@ -13,7 +13,7 @@ screen caskets():
         idle "idle.png"
         hover "bg caskets_gold_singular.png"
 
-        action Jump("gold_morocco")
+        action Jump("gold_bassanio")
 
     imagebutton:
         xpos 0
@@ -21,7 +21,7 @@ screen caskets():
         idle "idle.png"
         hover "bg caskets_silver_singular.png"
 
-        action Jump("silver_morocco")
+        action Jump("silver_bassanio")
 
     imagebutton:
         xpos 880
@@ -29,7 +29,7 @@ screen caskets():
         idle "idle.png"
         hover "bg caskets_lead_singular.png"
 
-        action Jump("lead_morocco")
+        action Jump("lead_bassanio")
 
     
 
