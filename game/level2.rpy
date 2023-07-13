@@ -238,7 +238,32 @@ label lead_bassanio:
     bassanio "The humble lead casket, often overlooked in favor of its more opulent counterparts. 
     Yet, there is an allure to its unassuming presence, as if it holds a hidden treasure of its own. Let me unlock its secrets."
 
+    "Bassanio opens the lead casket to find a jigsaw puzzle of woman"
+
+    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    portia "Bassanio you have successfully chosen the right casket"
+    portia "Now you must prove your worthiness by solving this jigsaw puzzle"
+
+    jump jigsaw_game
+
     return
+
+label jigsaw_complete:
+    scene bg caskets
+    "The jigsaw puzzle turned out to be a portrait of Portia"
+    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    portia "Bassanio,you have proven your worthiness"
+    portia "I aspire to surpass myself for you. Twentyfold worth, a
+    thousandfold beauty, ten thousandfold riches. Seeking virtue, wealth,
+    and friends for your admiration. Inexperienced but willing to learn. My
+    devoted spirit is yours. My possessions, mansion, servants, and ring,
+    all yours. Preserve our love with the ring."
+    hide portia_inverted
+    "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
+    jump level3
 
 
     

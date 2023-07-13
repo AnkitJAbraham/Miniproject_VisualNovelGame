@@ -504,13 +504,13 @@ label give_up:
     
 # The game starts here.
 label start_hanoi:
-    "The guard reveals 3 pegs and 4 disks"
+    "The guard reveals 3 pegs and 5 disks"
     shylock_guard "This is a Tower of Hanoi game.The goal is to move all the disks from one peg to another while following the rules of the puzzle. 
     If you can solve it in the minimum number of moves, I will grant you access to see Shylock"
 
     scene black
     "..."
-    call hanoi_game(blocks_number=4) # pass the desirable number of blocks
+    call hanoi_game(blocks_number=5) # pass the desirable number of blocks
 
     return
 

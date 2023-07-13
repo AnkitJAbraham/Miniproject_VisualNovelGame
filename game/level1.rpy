@@ -1,4 +1,5 @@
 label level1:
+    scene bg streets_of_venice
     play music "audio/bustling_city.opus"
     
     "The bustling city of Venice is alive with merchants, sailors, and locals going about their daily business."
@@ -111,23 +112,24 @@ label visit_shylock:
 
     menu:
         "Bribe":
-            antonio "Guard, I understand the importance of your role here. 
-            Allow me to propose an alternative arrangement. 
-            If we were to provide you with a suitable bribe, would you consider granting us access to see Shylock?"
+            label bribe_guard:
+                antonio "Guard, I understand the importance of your role here. 
+                Allow me to propose an alternative arrangement. 
+                If we were to provide you with a suitable bribe, would you consider granting us access to see Shylock?"
 
-            "The guard glances around discreetly, ensuring no one else is listening, and then leans in closer to Antonio."
+                "The guard glances around discreetly, ensuring no one else is listening, and then leans in closer to Antonio."
 
-            shylock_guard "Alright, Antonio, I see your offer. Money has a way of making things happen. Show me what you have in mind."
+                shylock_guard "Alright, Antonio, I see your offer. Money has a way of making things happen. Show me what you have in mind."
 
-            "Antonio discreetly passes a pouch of coins to the guard, ensuring that their transaction remains concealed."
-            antonio "Here, as promised. This should be sufficient to secure our access to Shylock."
+                "Antonio discreetly passes a pouch of coins to the guard, ensuring that their transaction remains concealed."
+                antonio "Here, as promised. This should be sufficient to secure our access to Shylock."
 
-            "Coins available with antonio before paying the guard = [wallet]"
-            $wallet-=1000
+                "Coins available with antonio before paying the guard = [wallet]"
+                $wallet-=1000
 
-            "Coins remaining with antonio = [wallet]"
+                "Coins remaining with antonio = [wallet]"
 
-            jump see_shylock
+                jump see_shylock
 
         "Challenge":
             antonio "Guard, I propose a challenge to settle this matter.
@@ -250,6 +252,11 @@ label failed_hanoi:
     antonio "We apologize for our mistake. We misunderstood the puzzle."
     bassanio "Indeed, we made an error in our calculations. We appreciate your patience."
     shylock_guard "Patience? I have none for incompetence. It's clear that you are unworthy of proceeding. Leave this place immediately."
+    menu:
+        "bribe":
+            jump bribe_guard
+        "leave":
+            pass
     scene bg game_over
     "Game over"
     return

@@ -13,6 +13,13 @@ define moroccan_prince= Character(_("Prince of Morocco"), color="#b16610a4")
 
 define arragon_prince= Character(_("Prince of Arragon"), color="#1612e9a4")
 
+image portia:
+    "portia.png"
+    zoom 0.5
+
+image portia_inverted:
+    "portia_inverted.png"
+    zoom 0.5
 
 label start:
     $ _skipping=False
@@ -20,13 +27,15 @@ label start:
     scene bg streets_of_venice
     menu:
         "level 1":
+            scene bg level1
+            "Level 1"
             jump level1
         "level 2":
+            scene bg level2
+            "Level 2"
             jump level2
         "level 3":
-            pass
-        "level 4":
-            pass
+            jump level3
     
     return
 
