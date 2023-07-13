@@ -127,6 +127,8 @@ label visit_shylock:
 
             "Coins remaining with antonio = [wallet]"
 
+            jump see_shylock
+
         "Challenge":
             antonio "Guard, I propose a challenge to settle this matter.
             If I can best you in an intellectual game of your choosing, will you then grant us access to see Shylock?"
@@ -136,35 +138,9 @@ label visit_shylock:
 
             shylock_guard "Here's the puzzle I propose:"
 
-            scene bg fibonacci_squares
-            "The guard reveals a grid of squares"
-
-            shylock_guard "As you can see, each square is placed adjacent to the previous two squares, creating a spiral pattern."
-            shylock_guard "Your task is to determine the total number of squares in the grid when it reaches a certain point. 
-            Tell me, how many squares would be present when the grid reaches the 12th iteration?"
-
+            jump start_hanoi
             
-            $ answer=renpy.input("what is the 12th iteration of the series")
-
-            scene bg shylock_house_outside
-            show antonio_invert at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) 
-            show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) 
-            show shylock_guard at Position(xpos=0.9,xanchor=0.9,ypos=0.9,yanchor=0.9)
-
-            if(answer=="89"):
-                shylock_guard "Impressive, you got the answer right."
-                shylock_guard "Hmph, I suppose you have proven yourselves to some extent. Very well, you may enter. 
-                But remember, the real challenges lie ahead."
-            else:
-                shylock_guard "Pathetic! You couldn't even answer a simple question correctly. It seems your intellect is lacking."
-                antonio "We apologize for our mistake. We misunderstood the puzzle."
-                bassanio "Indeed, we made an error in our calculations. We appreciate your patience."
-                shylock_guard "Patience? I have none for incompetence. It's clear that you are unworthy of proceeding. Leave this place immediately."
-                scene bg game_over
-                "Game over"
-                return
-
-
+label see_shylock:
     stop music
     play music "audio/hopeful_music.opus"
 
@@ -241,17 +217,41 @@ label visit_shylock:
             Christian who would never do such things. If you have any such
             suspicions about me then you are misinformed."
     if(shylock_satisfaction<3):
-        shylock "Antonio you have not met my requirements.You shall not be
-        guaranteed the loan.I thought your friendship with bassanio meant
-        more to you."
-        return
-        
+        shylock "Antonio you have not met my requirements.
+        I thought your friendship with bassanio meant more to you."
+
+        shylock "I shall agree to your loan only if you are able to make a security payment of 2000 ducats upfront"
+        if(wallet<2000):
+            antonio "I'm sorry.I currently do not possess such an amount.I currently have only [wallet] ducats with me"
+            scene bg game_over
+            "Game over"
+            return
+        else:
+            antonio "I agree to your terms Shylock"
+
+            "Antonio had [wallet] ducats with him"
+            $wallet-=2000
+
+            "Antonio now has [wallet] ducats"
+            jump level2
+
     else:
         shylock "Very well, Antonio. We shall draw up the bond. But beware, if you
         default, the bond shall be enforced."
-        jump got_loan_from_shylock
+        jump level2
 
-label got_loan_from_shylock:
-    jump level2
+label failed_hanoi:
+    scene bg shylock_house_outside
+    show antonio_invert at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) 
+    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) 
+    show shylock_guard at Position(xpos=0.9,xanchor=0.9,ypos=0.9,yanchor=0.9)
+
+    shylock_guard "Pathetic! You couldn't even answer a simple question correctly. It seems your intellect is lacking."
+    antonio "We apologize for our mistake. We misunderstood the puzzle."
+    bassanio "Indeed, we made an error in our calculations. We appreciate your patience."
+    shylock_guard "Patience? I have none for incompetence. It's clear that you are unworthy of proceeding. Leave this place immediately."
+    scene bg game_over
+    "Game over"
+    return
     
                 
