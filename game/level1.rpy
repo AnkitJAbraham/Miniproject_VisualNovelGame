@@ -89,6 +89,20 @@ label visit_valentino:
 
 label visit_shylock:
     stop music
+    #jump shortest_path_shylock
+    scene bg pure_black
+    "Antonio and Bassanio must now visit Shylock through the shortest available path"
+
+    scene venice_map_graph
+
+    "Guide Antonio and Bassanio through the city of Venice"
+    $path=renpy.input("What is the shortest path in the given graph from A to J")
+    if(path=="ABDEFGIHJ" or path=="abdefgihj"):
+        pass
+    else:
+        scene bg game_over
+        "Game over"
+        return
     scene bg shylock_house_outside
 
     "Antonio and Bassanio reach Shylock's house"

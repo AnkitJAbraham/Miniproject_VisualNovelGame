@@ -1,269 +1,383 @@
+# LEVEL 2 part 1
+    
+# Character definitions
+define launcelot = Character("Launcelot")
+define gobbo = Character("Gobbo")
+
+define jessica = Character("Jessica")
+define gratiano = Character("Gratiano")
+define lorenzo = Character("Lorenzo")
+
+image bassanio_large_inverted:
+    "bassanio_inverted.png"
+    zoom 1.3
+
+image jessica_large_inverted:
+    "jessica_inverted.png"
+    zoom 1.4
+
+image salerio_lvl2:
+    "salerio.png"
+    zoom 1.3
+
+image solanio_lvl2:
+    "solanio_right.png"
+    zoom 1.5
+
+image gratiano_left:
+    "gratiano_left.png"
+    zoom 1.3
+
+image lorenzo_right:
+    "lorenzo_right.png"
+    zoom 1.3
+
+image masquerade_gratiano:
+    "masquerade_gratiano.png"
+    zoom 1.4
+
+image masquerade_salerio:
+    "masquerade_salerio.png"
+    zoom 1.4
+
+image masquerade_jessica:
+    "masquerade_jessica.png"
+    zoom 1.4
+
 label level2:
     stop music
-    scene bg pure_black
-    "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
-    Nerissa discuss the intriguing ‘lottery’ that Portia’s father devised
-    before his death."
-    scene bg portia_house_belmont_day
+    # INT. PATHWAY BETWEEN BUILDINGS IN THE STREETS OF VENICE - DAY
+    scene bg meeting_place
 
-    show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-    nerissa "Portia,your father has set up a lottery where your suitors will have to
-    choose between chests of gold, silver, and lead, and whoever chooses
-    the right one will win you as a wife."
+    #play music "audio/bustling_city.opus"
     
-    nerissa "I am sure whoever chooses correctly will be a man who will love you well. But what are your
-    feelings toward the princely suitors who have already paid you visits?"
 
-    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    # Launcelot enters alone
+    show launcelot at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
-    portia "The prince of naples talkes about his horses all the time and I'm
-    worried his mother had an affair with a blacksmith."
-    portia "Then there is Count Palatine, he does nothing but frown."
-    portia "I'd rather be married to a skull with a bone in its mouth than to either of these men!"
-    nerissa "Do you remember, lady, from your father's time in Venice, a scholar
-    and soldier who came here along with the Marquess of Montferrat?"
-    portia "Yes, yes, it was Bassanio — I think that was his name."
-    nerissa "That's right, madam. Of any man my foolish eyes have ever seen, he
-    was the one most deserving of a beautiful lady."
-    hide portia
-    hide nerissa
-    scene bg portia_house_belmont_day
-    "Portia and Nerissa are interrupted by trumpets "
-    "The Prince of Morocco, a dark-skinned African dressed in white, and
-    three or four followers enter portia's house to take part in the lottery"
+    # Dialogues
+    launcelot "Part of me wants to flee from my master, this Jew. My conscience advises me to stay, but the devil is more friendly in urging me to run away."
 
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
+    "Gobbo, Launcelot's father enters with a basket"
 
-    moroccan_prince "My lady,I have come all the way from morocco to take part in the trial"
-    moroccan_prince "I beseech you not to judge me based on my skin's shadowy
-    hue, a result of the African sun. Brave men have been intimidated by it,
-    but esteemed beauties of my land love me. I treasure my dark skin,
-    except for desiring your kind opinion of me."
+    show gobbo_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 100
+    gobbo "Excuse me, young man, where is the Jew's house? A man named Launcelot lives with him, he is the servant of this Jew."
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
+    # Launcelot's choices
+    menu:
+        "Play tricks": 
+            jump level2_part1_choice1
+        "Help his father": 
+            jump level2_part1_choice2
 
-    portia "When it comes to selecting a husband, I value qualities beyond mere
-    appearance."
-    portia "Moreover, my fate is determined by a lottery, depriving
-    me of the ability to choose for myself."
-    portia "However, if my father hadn't denied me that right, you, esteemed Prince, would be considered as
-    worthy a husband in my eyes as anyone else."
+# LEVEL 2 part 1 - CHOICE 1
+label level2_part1_choice1:
 
-    moroccan_prince "Dear Portia, your words are a testament to your wisdom and beauty that transcends mere appearances. 
-    I am deeply honored by your kind sentiments."
+    # Dialogues for Choice 1
+    launcelot "(To himself)Oh God, this is my father. He is as blind as a bat and doesn't recognise me. I'll play some tricks on him."
 
-    moroccan_prince"It is true that the lottery places both of us in a position where our fates are determined by chance rather than choice. 
-    However, your recognition of my worth as a potential husband fills my heart with joy and admiration."
+    # Continue the conversation with Launcelot tricking Gobbo
 
-    moroccan_prince "Now, may I request your assistance in leading me to the caskets, as I wish to test
-    my luck. With this sword, I have achieved victories over Persia's leader
-    and a prince, as well as conquered Sultan Solyman in three battles."
+    gobbo "Are you talking about young Master Launcelot?"
+    launcelot "Not a 'master,' sir, but a poor man's son. His father, though, is an honest, if very poor, man and— thank God—in good health."
+    launcelot "Well, whatever his father is like, we are talking about young Master Launcelot."
+    gobbo "Master, I am speaking of someone simply called Launcelot."
+    launcelot "Ergo, Master Launcelot. Don't talk about Master Launcelot, father. That young gentleman, according to his fate and destiny and so forth, the Three sisters and so on, is deceased. Or, to say it plainly, he has gone to heaven."
+    gobbo "God forbid! In my old age I relied on that boy, like a crutch!"
 
+    # Choices continuation or beginning
+    menu:
+        "Continue the conversation":
+            jump level2_part2_choice1
+        "Skip to section after the trickery":
+            jump level2_part2_choice2
+
+# LEVEL 2 part 2 - CHOICE 1
+label level2_part2_choice1:
+
+    # Dialogues for Choice 1 continuation
+    launcelot "Do I look like a crutch or a prop? Do you recognize me, father?"
+    gobbo "Alas, sir, I am completely blind. I don't know you."
+    jump level2_part2_common
+
+# LEVEL 2 part 2 - CHOICE 2
+label level2_part2_choice2:
+
+    # Dialogues for Choice 2 beginning
+    launcelot "Watch this. Now I'll raise the stakes."
+    launcelot "Are you talking about young Master Launcelot?"
+    gobbo "Not a 'master,' sir, but a poor man's son. His father, though, is an honest, if very poor, man and— thank God—in good health."
+    launcelot "Well, whatever his father is like, we are talking about young Master Launcelot."
+    gobbo "Master, I am speaking of someone simply called Launcelot."
+    launcelot "Ergo, Master Launcelot. Don't talk about Master Launcelot, father. That young gentleman, according to his fate and destiny and so forth, the Three sisters and so on, is deceased. Or, to say it plainly, he has gone to heaven."
+    gobbo "God forbid! In my old age I relied on that boy, like a crutch!"
+    stop music
+
+# Common part for both choices
+label level2_part2_common:
+
+    # Continue with the story...
+    #play music "audio/bustling_city.opus"
+    # LEVEL 2 part 3
     
-    moroccan_prince"Yet, there remains a fear that blind luck could allow a less deserving
-    man to win your hand, causing me immense grief."
+    # Dialogues for LEVEL 2 part 3
+    launcelot "Please, enough fooling around. Give me your blessing. I am Launcelot, who was, is, and will continue to be your son. I am the Jew's servant, and I am sure your wife Margery is my mother."
+    gobbo "My wife's name is Margery, indeed. If you're Launcelot, I'll swear you are my own flesh and blood. (He feels the back of LAUNCELOT's head) Good lord, what a beard you have! You have more hair on your chin than my horse Dobbin has on his tail."
+    launcelot "It would seem that Dobbin's tail is shrinking, then. I am sure that he had more hair on his tail the last time I saw him than I have on my face."
+    gobbo "Lord, you have changed! How are you and your master getting along? I have bought him a present. Are you getting along with him?"
+    launcelot "I've decided to escape from my Jewish master who mistreats me and barely feeds me. I hope to run far away and give a present to Master Bassanio instead. If I continue serving the Jew, I'll become like him."
 
-    portia "You must try your luck. Either don't attempt it at all, or promise before
-    you choose a casket that if you choose the wrong one you will never
-    speak to a lady about marriage again. Be warned."
+    "Bassanio enters with Leonardo"
 
-    moroccan_prince "I promise. Come on, bring me to the caskets."
+    launcelot "Go talk to him, father."
+    gobbo "(To BASSANIO) God bless you!"
 
-    hide moroccan_prince
-    hide portia_inverted
+    # LEVEL 2 part 4."
+    hide launcelot
+    hide gobbo_inverted
 
-    "Trumpets play. The Prince of Arragon and his attendants enter interrupting Portia and the Moroccan prince"
-
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show launcelot_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    portia "Ah, the Prince of Arragon has arrived. Welcome to my house, noble prince. You have come to participate in the lottery, I presume?"
-
-    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    arragon_prince "Indeed, fair Portia. I have graced this occasion with my presence, fully confident in my ability to choose wisely."
-
-    hide portia_inverted
-
-    show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    moroccan_prince "Greetings, Prince of Arragon. It seems we have another contender for the prize. May the best man win."
-
-    arragon_prince "The best man? That title belongs to me, Moroccan prince. I assure you, I have already bested many in my endeavors."
-
-    hide moroccan_prince_inverted
-
-    hide arragon_prince
-
-    "As the Moroccan prince and the Prince of Arragon are engaged in conversation, 
-    they are interrupted by the sudden arrival of Bassanio at Portia's house to participate in her father's lottery."
-
-
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    portia "Gentlemen, it seems we have another guest. Bassanio, welcome! Are you here to partake in the lottery as well?"
-
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-    
-    bassanio "Indeed, fair Portia. I have come to take my chance, hoping to win not only your hand 
-    but also the honor and privilege of being your husband."
-    
-    hide portia_inverted
-
-    show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    moroccan_prince "Ah, another competitor joins the fray. Bassanio, may I extend my greetings and wish you luck in your endeavor."
-
-    hide moroccan_prince_inverted
-    
-    show arragon_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    arragon_prince "Bassanio, is it? I trust you are aware of the caliber of competition present here. Your chances of success appear quite slim."
-
-    bassanio "Thank you for your kind words, Prince of Arragon. I am fully aware of the challenges that lie ahead, but I am here with confidence and determination"
-
-    hide arragon_prince_inverted
-
-    hide bassanio
-
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-
-    portia  "Gentlemen, to ensure fairness and transparency, I invite all three of you to accompany me to 
-    the temple where the caskets are kept. It is there that you shall make your choices."
-
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    moroccan_prince "An excellent suggestion, Portia. Let us proceed to the temple and put an end to this suspense."
-
-    hide moroccan_prince
-
-    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    arragon_prince "Very well, Portia. I am eager to see the caskets and make my choice. Lead the way."
-
-    hide arragon_prince
-
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show gobbo_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
             yoffset 100
 
-    bassanio "I am ready to accompany you to the temple, Portia. May the truth be revealed and fate guide us in our decisions."
+    show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.3,yanchor=0.3) with moveinright:
+        yoffset 100
+
+    bassanio "Thanks! Do you want something?"
+    launcelot "Not a poor boy, sir, but a servant of the rich Jew. And I would like, sir, as my father will tell you—"
+    gobbo "He has a great desire, sir, as they say, to serve—"
+    launcelot "Yes, to make a long story short, I currently serve under the Jew and, as my father will tell you, I have a desire—"
+    gobbo "He and his master, your reverence, are not the closest of friends—"
+    launcelot "To be brief, the truth is that the Jew, having wronged me, now makes it so that I, as my father, being an old man, will provide you with GOBBO I have a gift of a plate of doves here that I would give to you, and all I ask is—"
+    bassanio "One of you speak for both of you. What do you want?"
+    launcelot "To be your servant, sir."
+    bassanio "I know you well. You will get what you ask for. Your master Shylock spoke with me today and spoke well of you, if you really want to leave the service of a rich Jew to become a servant of such a poor gentleman."
+    launcelot "The old proverb says, 'the grace of God is enough.' It could be split up between you and my master Shylock, sir. You have the grace of God, and he has enough."
+    bassanio "Well said. Go along with your son, father. Go leave your old master and come inquire at my house. (To his attendants) Give him a outfit more frilled than his fellow servants. Make sure this is done."
+    launcelot "Examining my own palm, I see a promising future. Multiple marriages, surviving close calls, and encounters with fortune. Join me, father, as leave the Jew behind in the blink of an eye."
+
+    "THE CLOWN LAUNCELOT EXITS WITH OLD GOBBO."
+    hide launcelot_inverted with dissolve
+    hide gobbo_inverted with dissolve
+    hide bassanio_large_inverted with dissolve
+    
+    # LEVEL 2 part 7
+    "Jessica and Launcelot the clown enter."
+
+    show launcelot at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    show jessica_large_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 100
+
+    jessica "I regret your departure from my father's service in such a manner. Our home is a chaotic place, and your humor brought some relief. Nevertheless, I sincerely wish you the best. Here's a ducat as a token, and please deliver this letter to Lorenzo when you meet him at dinner."
+    launcelot "Goodbye! I am speaking through my tears. You most beautiful pagan, you sweet Jew! I'll bet some Christian will figure out a way to get you. But goodbye. These silly tears aren't very manly. Goodbye."
+    jessica "Farewell, good Launcelot."
+
+    "LAUNCELOT exits."
+
+    hide launcelot with dissolve
+
+    # LEVEL 2 part 7
+    jessica "Alas, what a heinous sin it is for me to be ashamed to be my father's child! I am his daughter by blood, but I have not inherited his manners. Oh, Lorenzo, if you keep your promise I will end this pain by becoming a Christian and your loving wife."
+    
+    "JESSICA EXITS."
+    hide jessica_large_inverted with dissolve
+
+    "Gratiano, Lorenzo, Salerio, and Solanio enter."
+
+    show gratiano_left at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    show lorenzo_right at Position(xpos=0.3,xanchor=0.3,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    
+    show salerio_lvl2 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
+    show solanio_lvl2 at Position(xpos=0.1,xanchor=0.1,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    
+    gratiano "We haven't prepared well enough for this."
+    salerio "We haven't got ourselves torchbearers yet."
+    solanio "Unless we plan carefully, this will turn out badly, and it will be better not to try this."
+    lorenzo "It's only four o'clock now. We have two hours to get ready."
+    launcelot "LAUNCELOT ENTERS WITH A LETTER."
+    show launcelot_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
+    lorenzo "(Examines the letter) My friend Launcelot, what's the news?"
+    launcelot "(Hands the letter to LORENZO) If you would open this up, it will tell you."
 
 
+    # LEVEL 2 part 8
+
+    # Dialogues for LEVEL 2 part 8
+    lorenzo "(Opens the letter, recognizing the handwriting) I know this handwriting. Truly written by a beautiful hand, one whiter than the paper it wrote on."
+    gratiano "Something about love, is it?"
+    launcelot "(To LORENZO) May I leave, sir?"
+    lorenzo "Where are you going?"
+    launcelot "Sir, I am going to tell my old master the Jew to dine tonight with my new master the Christian."
+    lorenzo "(Gives LAUNCELOT money) Hold on. Take this. Tell gentle Jessica that I won't fail her. Tell her this privately. And you gentlemen, go and prepare for this masquerade party tonight. I have a torchbearer."
+    
+    "LAUNCELOT THE CLOWN EXITS."
+    hide launcelot_inverted with dissolve
+
+    salerio "Yes, sure thing, I'll go see to it right away."
+    solanio "And so will I."
+
+    hide solanio with dissolve
+
+    # LEVEL 2 part 9
+    lorenzo "Meet Gratiano and me at Gratiano's house a few hours from now."
+    salerio "That's a good plan."
+    gratiano "(Reads the letter) Wasn't that letter from the beautiful Jessica?"
+    lorenzo "I must disclose everything. She has guided me in her escape plan, revealing her wealth and a servant's outfit. Her kind and gentle nature is a credit to her father."
+    lorenzo "May misfortune only strike if it's due to her connection to a faithless Jew. Now, come with me. (He gives GRATIANO the letter) Read this as you go. Beautiful Jessica will be my torchbearer."
+
+    "LORENZO AND GRATIANO EXIT"
+    hide lorenzo_right with dissolve
+    hide gratiano_left with dissolve
+    hide salerio_lvl2 with dissolve
+    hide solanio_lvl2 with dissolve
+
+    # LEVEL 2 part 10
     scene bg pure_black
-
-    "Portia accompanies the Moroccan prince,the prince of Arragon and Bassanio to the temple where the caskets are located."
-
-    scene bg caskets
-
-    "The servant opens a curtain revealing three caskets: a gold one, a silver
-    one, and a lead one"
-
-    portia "Now choose one of the caskets."
-
-    portia "To determine the correct casket, consider their inscriptions: The
-    golden one offers what many desire, the silver one grants what is
-    deserved, and the lead one demands sacrifice and risk. Trust your
-    judgment and intuition to uncover the right choice."
-
-    portia "One of them has my picture inside, Prince. If you choose that one then
-    I am yours"
-
-    show moroccan_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    moroccan_prince "This inscription speaks to me. It shall guide my choice."
-
-    hide moroccan_prince
-
-    show arragon_prince at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    arragon_prince "I have studied the inscriptions thoroughly. I am confident in my selection."
-
-    hide arragon_prince
-
-    "The prince of Arragon and the Moroccan prince have both made their choices."
-
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
-
-    bassanio "The moment of truth has arrived. I trust my heart's instincts to lead me to the right casket."
-
-    "Now choose one among the caskets as Bassanio"
-
-    hide bassanio
+    "The scene shifts to Shylock's house"
+    scene bg shylocks_office_day
     
-    call screen caskets
 
-label gold_bassanio:
-    "Bassanio chooses the Golden casket"
-
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
         yoffset 100
 
-    bassanio "Portia's beauty and grace shine like a golden sun, and my heart tells me to follow this path. I must trust my instincts and believe that true love lies within this golden casket."
+    show launcelot_inverted at Position(xpos=0.1,xanchor=0.1,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 150
+    stop music
 
-    return
+    play music "audio/calmtune.opus"
 
-label silver_bassanio:
-    "Bassanio chooses the Silver casket"
+    stop music
+    shylock "You will witness the difference between old Shylock and Bassanio. (To JESSICA) Jessica!"
+    shylock "(To LAUNCELOT) You won't gorge on food like with me. (To JESSICA) Jessica! (To LAUNCELOT) No more sleep, snoring, or ruining clothes. (To JESSICA) Jessica, I'm calling you!"
+    
+    
+    launcelot "Yes, Jessica!"
+    shylock "Who told you to call her? I didn't order it."
+    launcelot "You often told me not to act without your command."
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show jessica_large_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 150
+
+    jessica "You called? What do you want?"
+    
+
+    # Branching Scenario - Option A: Jessica's Escape
+    shylock "I received a dinner invitation, Jessica. Here are my keys. Yet, why should I go? They don't invite me out of affection but to flatter. Still, out of spite, I'll eat that Christian's food. Take care of the house, my girl. I'm hesitant to leave, as trouble brews from my dream of money bags."
+    shylock "Listen, Jessica. Lock the doors. When you hear the drum and vile flute, don't look out, shut the windows, and keep their foolish celebration away. I won't feast, but I'll go to the dinner. Launcelot, inform them I'm coming."
+    launcelot "I will go ahead, sir."
+
+    # LEVEL 2 part 11
+    launcelot "(To Jessica) Mistress, despite your father's warnings, look out of a window. You'll see a Christian come by who's worth your Jewish eye."
+    
+    hide launcelot_inverted with dissolve
+    "LAUNCELOT EXITS"
+    
+    stop music
+    shylock "What did that foolish Christian tell you?"
+    play music "audio/tense_music.opus"
+
+    menu:
+        "Continue the conversation":
+            stop music
+            jump level2_part10_choice1
+        "Skip to section after the trickery":
+            stop music
+            jump level2_part10_choice2     
+
+label level2_part10_choice1:
+    jessica "He said, 'Farewell, mistress.' Nothing else."
+    shylock "He's friendly but eats a lot, moves slowly, and sleeps excessively. I'll replace him with hardworking individuals for my team. I'll release him and have him repay the money he borrowed. Jessica, go inside and secure everything."
+    jessica "Farewell, and if I have any good luck, soon I will have lost a father and you will have lost a daughter."
+    jump level2_part13
+
+
+label level2_part10_choice2:
+    # Branching Scenario 2 - Option B: Jessica's Loyalty
+    jessica "Father, I confess my intentions to elope with Lorenzo for marriage. However, as I stand here, I can't leave you. Despite our differences, let's bridge the gap, mend our relationship. I'll stay, seek understanding and acceptance. Please, give us a chance."
+    # LEVEL 2 part 12
+
+    # Dialogues for LEVEL 2 part 12
+    shylock "Jessica, your plans to elope and the money don't concern me. What truly matters is repairing our relationship. Let's bridge the gap, seek understanding, and give ourselves a chance to reconcile."
+    jessica "Thank you for your understanding father. What was it you and Launcelot were discussing?"
+    shylock "I received a dinner invitation, Jessica. Here are my keys. Yet, why should I go? They don't invite me out of affection but to flatter. Still, out of spite, I'll eat that Christian's food. Take care of the house, my girl. I'm hesitant to leave, as trouble brews from my dream of money bags."
+    launcelot "Please, sir, go to the dinner. My young master expects your presence."
+    shylock "And I expect his."
+
+    "Exit JESSICA."
+    hide jessica_large_inverted with dissolve
+
+    jump level2_part13
+
+label level2_part13:
+    scene bg masquerade_party
+
+    "GRATIANO AND SALERIO, DRESSED FOR MASQUERADE, ENTER."
+
+    show masquerade_gratiano at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+    show masquerade_salerio at Position(xpos=0.3,xanchor=0.3,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
-    bassanio "The silver casket, a symbol of dignity and grace. Surely, within this choice lies the reward that matches my worth. 
-    Let us unveil the truth that awaits me."
+    # LEVEL 2 part 13
+    gratiano "This is the house Lorenzo wanted us to wait at."
+    salerio "He's almost late."
+    gratiano "Surprising, as lovers are usually early."
+    salerio "Venus' doves fly faster for new love than to keep faith."
+    gratiano "True, who leaves a feast as hungry as they arrived? What horse retraces its steps with the same enthusiasm? Chasing is more thrilling. Ships return weathered, torn by the wind!"
+    salerio "Here comes Lorenzo. We'll discuss this later."
 
-    return
+    lorenzo "Forgive my lateness. When you steal your wives, I'll wait too. This is my father-in-law's house. Who's there?"
+    jessica "Who are you? I recognize your voice."
+    lorenzo "It's Lorenzo, your love."
 
-label lead_bassanio:
-    "Bassanio chooses the Lead casket"
+    hide masquerade_salerio with dissolve
+    
+    play music "audio/love_tune.opus"
+    # LEVEL 2 part 14
+    jessica "You're Lorenzo, my love. Who else knows I'm yours?"
+    lorenzo "Heaven and your thoughts know you're mine."
+    jessica "Catch this box. It's worth it. I'm glad it's dark. Love is blind. Cupid would blush to see me disguised as a boy."
+    lorenzo "Come down. You'll be my torchbearer."
+    jessica "Hold a candle to my shame? It's too light. Love's discovery blinds. I should stay hidden."
+    lorenzo "You're hidden, even as a boy. Let's go. They're waiting at Bassanio's feast."
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
-        yoffset 100
+    # LEVEL 2 part 15
+    jessica "I'll secure the doors and get more money. I'll join you soon."
+    gratiano "She's too gentle to be a Jew."
 
-    bassanio "The humble lead casket, often overlooked in favor of its more opulent counterparts. 
-    Yet, there is an allure to its unassuming presence, as if it holds a hidden treasure of its own. Let me unlock its secrets."
+    # LEVEL 2 part 16
+    lorenzo "I love her wholeheartedly. She's wise, beautiful, and loyal."
+    jessica "I'm here. Let's go! They're waiting at the masquerade."
+    hide lorenzo with dissolve
+    hide jessica with dissolve
 
-    "Bassanio opens the lead casket to find a jigsaw puzzle of woman"
+    stop music
+    play music "audio/puzzling_tune.opus"
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
+    antonio "Who's there?"
+    show antonio with fade
+    gratiano "Antonio?"
 
-    portia "Bassanio you have successfully chosen the right casket"
-    portia "Now you must prove your worthiness by solving this jigsaw puzzle"
+    # LEVEL 2 part 17
+    antonio "Gratiano, where's everyone? No masquerade. Bassanio boards soon. I sent twenty to find you."
+    gratiano "Good! I want to set sail tonight."
 
-    jump jigsaw_game
+    stop music
 
-    return
+    hide antonio with dissolve
+    hide gratiano with dissolve
 
-label jigsaw_complete:
-    scene bg caskets
-    "The jigsaw puzzle turned out to be a portrait of Portia"
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
-        yoffset 100
-    portia "Bassanio,you have proven your worthiness"
-    portia "I aspire to surpass myself for you. Twentyfold worth, a
-    thousandfold beauty, ten thousandfold riches. Seeking virtue, wealth,
-    and friends for your admiration. Inexperienced but willing to learn. My
-    devoted spirit is yours. My possessions, mansion, servants, and ring,
-    all yours. Preserve our love with the ring."
-    hide portia_inverted
-    "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
+    "THE END OF LEVEL 2"
+
     jump level3
-
-
-    

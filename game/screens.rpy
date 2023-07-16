@@ -278,7 +278,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Levels") action ShowMenu("levels")
+        #textbutton _("Levels") action ShowMenu("levels")
 
         textbutton _("Preferences") action ShowMenu("preferences")
 

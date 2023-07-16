@@ -26,16 +26,20 @@ label start:
     $wallet= 2000
     scene bg streets_of_venice
     menu:
-        "level 1":
+        "Level 1":
             scene bg level1
             "Level 1"
             jump level1
-        "level 2":
+        "Level 2":
             scene bg level2
             "Level 2"
             jump level2
-        "level 3":
+        "Level 3":
+            scene bg level3
+            "Level 3"
             jump level3
+        "Level 4":
+            jump level4
     
     return
 
