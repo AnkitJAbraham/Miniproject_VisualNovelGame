@@ -138,10 +138,10 @@ label level2_part2_common:
     hide launcelot
     hide gobbo_inverted
 
-    show launcelot_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with moveinleft:
+    show launcelot_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1):
         yoffset 100
 
-    show gobbo_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show gobbo_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1):
             yoffset 100
 
     show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.3,yanchor=0.3) with moveinright:
@@ -255,7 +255,7 @@ label level2_part2_common:
         yoffset 150
     stop music
 
-    play music "audio/calmtune.opus"
+    #play music "audio/calmtune.opus"
 
     stop music
     shylock "You will witness the difference between old Shylock and Bassanio. (To JESSICA) Jessica!"
@@ -285,7 +285,7 @@ label level2_part2_common:
     
     stop music
     shylock "What did that foolish Christian tell you?"
-    play music "audio/tense_music.opus"
+    #play music "audio/tense_music.opus"
 
     menu:
         "Continue the conversation":
@@ -343,7 +343,7 @@ label level2_part13:
 
     hide masquerade_salerio with dissolve
     
-    play music "audio/love_tune.opus"
+    #play music "audio/love_tune.opus"
     # LEVEL 2 part 14
     jessica "You're Lorenzo, my love. Who else knows I'm yours?"
     lorenzo "Heaven and your thoughts know you're mine."
@@ -363,7 +363,7 @@ label level2_part13:
     hide jessica with dissolve
 
     stop music
-    play music "audio/puzzling_tune.opus"
+    #play music "audio/puzzling_tune.opus"
 
     antonio "Who's there?"
     show antonio with fade

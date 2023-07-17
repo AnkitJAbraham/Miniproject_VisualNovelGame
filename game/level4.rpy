@@ -28,9 +28,15 @@ image salerio:
 image man:
     "man.png"
     zoom 0.8
-
+image lorenzo_left:
+    "lorenzo_left.png"
+    zoom 1.3
 
 label level4:
+    scene bg pure_black
+    "3 months pass"
+    "Things remain calm for a while"
+    "The scene shifts to the Venice Market where Antonio's friends Salerio and Solanio are engaging in a discussion"
     scene bg streets_of_venice
     show salerio at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
         yoffset 100
@@ -175,6 +181,8 @@ label level4:
         yoffset 100
     shylock "Jailer, keep an eye on him. Don't say anything about mercy. That's the fool that lent out money with no interest. Keep an eye on him, jailer."
     
+    show antonio_invert at Position(xpos=0.1,xanchor=0.1,ypos=0.1,yanchor=0.1) with dissolve:
+        yoffset 150
     antonio "Just listen to me, good Shylock."
 
     shylock "I'll have what you owe. Don't argue. I've sworn an oath for it. You called me a dog, so beware my bite. The Duke will grant justice. Jailer, why did you come with him?"
@@ -183,22 +191,28 @@ label level4:
 
     shylock "I'll collect my debt. No more words. I won't be lenient or swayed by Christian pleas. Don't follow me. I won't listen. I will have what you owe."
     hide shylock
+    hide antonio_invert
 
     "Antonio is then later visited by his friend Solanio"
     show solanio_right at Position(xpos=0.1,xanchor=0.1,ypos=0.4,yanchor=0.4) with moveinleft:
-        yoffset 100
-    solanio "He is the most stubborn beast that ever kept company with men."
+        yoffset 150
+    solanio "(Referring Shylock) He is the most stubborn beast that ever kept company with men."
 
+    show antonio at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with dissolve:
+        yoffset 100
     antonio "Let him be. I won't continue my futile appeals. He seeks my life, and I understand why. I've often assisted those who owed him, only when they begged me at the last moment. That's why he harbors hatred towards me."
     solanio "I am sure the Duke will never allow him to take the pound of flesh."
 
-
-    antonio "The Duke must uphold the law. If he doesn't, foreign merchants will lose trust in Venice's justice, affecting our profits.
-    I've been too anxious to eat, unsure if I have any flesh to spare for my cruel creditor tomorrow. Jailer, let's go. I hope Bassanio witnesses the debt's repayment; that's my sole concern."
+    antonio "The Duke must uphold the law. If he doesn't, foreign merchants will lose trust in Venice's justice, affecting our profits."
+    
+    antonio "I've been too anxious to eat, unsure if I have any flesh to spare for my cruel creditor tomorrow. Jailer, let's go. I hope Bassanio witnesses the debt's repayment; that's my sole concern."
     
     "The scene shifts to portia's house"
 
     scene bg portia_house_belmont_day
+
+    show lorenzo_left at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 150
 
     lorenzo "Madam, your kindness and support for your husband's friend reflect your noble and genuine goodwill."
 
@@ -208,6 +222,10 @@ label level4:
 
     lorenzo "Madam, I will obey you with all my heart in your fair commands."
     lorenzo "May you have pleasant thoughts and happy times!"
+
+    hide lorenzo_left
+    "Lorenzo exits"
+    "Jessica enters"
 
     jessica "I wish you contentment, my lady."
 
@@ -226,13 +244,18 @@ label level4:
 
     nerissa "Will they see us?"
 
-    portia "nerissa, when we dress as men, I'll be the more handsome one, carrying my dagger bravely."
+    portia "Nerissa, when we dress as men, I'll be the more handsome one, carrying my dagger bravely."
 
 
     nerissa "Are we going to turn to men?"
 
 
-    portia " What a question! Seeking intimacy with men? Your mind is in the wrong place. But let's go, I'll explain my plan in the carriage at the gate. Hurry, we have twenty miles to cover today."
+    portia "What a question! Seeking intimacy with men? Your mind is in the wrong place. But let's go, I'll explain my plan in the carriage at the gate. Hurry, we have twenty miles to cover today."
+
+    scene bg pure_black
+    "Portia disguises herself as the lawyer Balthazar and proceeds to go to Court of Justice in Venice"
+    "END OF LEVEL 4"
+    jump level5
 
     
 

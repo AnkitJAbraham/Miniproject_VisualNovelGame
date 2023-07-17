@@ -40,6 +40,8 @@ label start:
             jump level3
         "Level 4":
             jump level4
+        "Level 5":
+            jump level5
     
     return
 

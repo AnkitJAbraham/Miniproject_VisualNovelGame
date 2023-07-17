@@ -1,3 +1,7 @@
+image bassanio_large:
+    "bassanio.png"
+    zoom 1.3
+
 label level3:
     stop music
     scene bg pure_black
@@ -110,7 +114,7 @@ label level3:
 
     portia "Gentlemen, it seems we have another guest. Bassanio, welcome! Are you here to partake in the lottery as well?"
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
     
     bassanio "Indeed, fair Portia. I have come to take my chance, hoping to win not only your hand 
@@ -134,7 +138,7 @@ label level3:
 
     hide arragon_prince_inverted
 
-    hide bassanio
+    hide bassanio_large
 
     show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
@@ -156,7 +160,7 @@ label level3:
 
     hide arragon_prince
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
             yoffset 100
 
     bassanio "I am ready to accompany you to the temple, Portia. May the truth be revealed and fate guide us in our decisions."
@@ -197,21 +201,21 @@ label level3:
 
     "The prince of Arragon and the Moroccan prince have both made their choices."
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     bassanio "The moment of truth has arrived. I trust my heart's instincts to lead me to the right casket."
 
     "Now choose one among the caskets as Bassanio"
 
-    hide bassanio
+    hide bassanio_large
     
     call screen caskets
 
 label gold_bassanio:
     "Bassanio chooses the Golden casket"
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     bassanio "Portia's beauty and grace shine like a golden sun, and my heart tells me to follow this path. I must trust my instincts and believe that true love lies within this golden casket."
@@ -230,7 +234,7 @@ label gold_bassanio:
 label silver_bassanio:
     "Bassanio chooses the Silver casket"
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     bassanio "The silver casket, a symbol of dignity and grace. Surely, within this choice lies the reward that matches my worth. 
@@ -251,7 +255,7 @@ label silver_bassanio:
 label lead_bassanio:
     "Bassanio chooses the Lead casket"
 
-    show bassanio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show bassanio_large at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     bassanio "The humble lead casket, often overlooked in favor of its more opulent counterparts. 
@@ -270,7 +274,8 @@ label lead_bassanio:
     devoted spirit is yours. My possessions, mansion, servants, and ring,
     all yours. Preserve our love with the ring."
     hide portia_inverted
-    "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
+    "Bassanio successfully completes the lottery and proceeds to marry Portia"
+    "END OF LEVEL 3"
     jump level4
 
     return
@@ -288,6 +293,7 @@ label jigsaw_complete:
     all yours. Preserve our love with the ring."
     hide portia_inverted
     "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
+    "END OF LEVEL 3"
     jump level4
 
 

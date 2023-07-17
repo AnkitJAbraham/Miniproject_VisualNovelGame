@@ -254,6 +254,7 @@ label see_shylock:
     else:
         shylock "Very well, Antonio. We shall draw up the bond. But beware, if you
         default, the bond shall be enforced."
+        "END OF LEVEL 1"
         jump level2
 
 label failed_hanoi:
