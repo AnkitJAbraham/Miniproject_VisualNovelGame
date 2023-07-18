@@ -1,3 +1,7 @@
+init python:
+    def lowercase(val):
+        return val.lower()
+
 label level1:
     scene bg streets_of_venice
     play music "audio/bustling_city.opus"
@@ -97,7 +101,10 @@ label visit_shylock:
 
     "Guide Antonio and Bassanio through the city of Venice"
     $path=renpy.input("What is the shortest path in the given graph from A to J")
-    if(path=="ABDEFGIHJ" or path=="abdefgihj"):
+    
+    $path=lowercase(path)
+    
+    if(path=="abdefghj"):
         pass
     else:
         scene bg game_over

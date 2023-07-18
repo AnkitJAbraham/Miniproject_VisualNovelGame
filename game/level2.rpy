@@ -236,11 +236,12 @@ label level2_part2_common:
     lorenzo "I must disclose everything. She has guided me in her escape plan, revealing her wealth and a servant's outfit. Her kind and gentle nature is a credit to her father."
     lorenzo "May misfortune only strike if it's due to her connection to a faithless Jew. Now, come with me. (He gives GRATIANO the letter) Read this as you go. Beautiful Jessica will be my torchbearer."
 
-    "LORENZO AND GRATIANO EXIT"
-    hide lorenzo_right with dissolve
-    hide gratiano_left with dissolve
-    hide salerio_lvl2 with dissolve
-    hide solanio_lvl2 with dissolve
+    "LORENZO GRATIANO,SALERIO AND SOLANIO EXIT"
+    hide lorenzo_right 
+    hide gratiano_left 
+    hide salerio_lvl2 
+    hide solanio_lvl2 
+    with dissolve
 
     # LEVEL 2 part 10
     scene bg pure_black
@@ -288,10 +289,10 @@ label level2_part2_common:
     #play music "audio/tense_music.opus"
 
     menu:
-        "Continue the conversation":
+        "(As Jessica) Lie to shylock about what Launcelot told you":
             stop music
             jump level2_part10_choice1
-        "Skip to section after the trickery":
+        "(As Jessica) Tell shylock the truth about what Launcelot told you":
             stop music
             jump level2_part10_choice2     
 
@@ -311,8 +312,6 @@ label level2_part10_choice2:
     shylock "Jessica, your plans to elope and the money don't concern me. What truly matters is repairing our relationship. Let's bridge the gap, seek understanding, and give ourselves a chance to reconcile."
     jessica "Thank you for your understanding father. What was it you and Launcelot were discussing?"
     shylock "I received a dinner invitation, Jessica. Here are my keys. Yet, why should I go? They don't invite me out of affection but to flatter. Still, out of spite, I'll eat that Christian's food. Take care of the house, my girl. I'm hesitant to leave, as trouble brews from my dream of money bags."
-    launcelot "Please, sir, go to the dinner. My young master expects your presence."
-    shylock "And I expect his."
 
     "Exit JESSICA."
     hide jessica_large_inverted with dissolve
@@ -348,9 +347,7 @@ label level2_part13:
     show masquerade_jessica at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with dissolve:
         yoffset 100
     lorenzo "It's Lorenzo, your love."
-    
-    
-    
+
     #play music "audio/love_tune.opus"
     # LEVEL 2 part 14
     jessica "You're Lorenzo, my love. Who else knows I'm yours?"

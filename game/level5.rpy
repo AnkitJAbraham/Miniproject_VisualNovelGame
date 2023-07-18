@@ -2,7 +2,9 @@ define duke= Character(_("Duke"), color="#8a0000")
 
 define stephano= Character(_("Stephano"), color="#87e70a")
 
-
+image stephano:
+    "stephano.png"
+    zoom 1.4
 image jessica_large:
     "jessica.png"
     zoom 1.4
@@ -154,8 +156,10 @@ label level5:
             of the deed. It's a cryptic message, and I believe it may hold a vital clue to
             the truth."
             scene bg encrypted_message
-            $cipher="the scales of justice measure a cost,where flesh is granted,blood is lost.Seek not crimson stains of red,but claim your due with words unsaid."
+            "The following is a Caesar cipher"
+            $cipher="the scales of justice measure a cost, where flesh is granted, blood is lost.seek not crimson stains of red, but claim your due with words unsaid."
             $answer=renpy.input("The Decrypted Message is:")
+            $answer=lowercase(answer)
             if(answer==cipher):
                 scene bg decrypted_message
                 "You were able to decipher the cryptic message"
@@ -493,6 +497,18 @@ label level5:
         jessica "Someone approaches; let's listen."
 
         "Stephano enters"
+        #hide jessica_large
+
+        show jessica_large at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1) with move:
+            yoffset 150
+
+        hide jessica_large
+
+        show jessica_large_inverted at Position(xpos=0.4,xanchor=0.4,ypos=0.1,yanchor=0.1):
+            yoffset 150
+
+        show stephano at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with dissolve:
+            yoffset 150
 
         lorenzo "Who comes so fast amid the silent night?"
 
@@ -509,10 +525,16 @@ label level5:
         stephano "A holy hermit and her maid alone.
         Has my master returned?"
 
-        lorenzo "Not yet, and no word from him.
-        Let's go inside, Jessica, and prepare a warm welcome."
+        lorenzo "Not yet, and no word from him."
 
-        "Launcelot enters"
+        "Stephano exits"
+        hide stephano
+        lorenzo "Let's go inside, Jessica, and prepare a warm welcome."
+
+        "Launcelot enters and interrupts them"
+
+        show launcelot at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 100
 
         launcelot "Sola, sola! Wo ha, ho, sola, sola!"
 
@@ -530,29 +552,30 @@ label level5:
         launcelot "A messenger with good news from my master.
         He'll be here before morning."
 
+        hide launcelot
+
         "Launcelot Exits"
 
-        lorenzo "Let's go inside, Jessica, and wait for their arrival.
-        But wait, I hear footsteps of someone else."
+        lorenzo "Let's go inside, Jessica, and wait for their arrival."
 
-        "Enter Musicians"
+        hide lorenzo_large_right
+        hide jessica_large_inverted
+        with dissolve
+        "Lorenzo and Jessica exit"
 
-        lorenzo "Come, ho! Let's wake Diana with a hymn,
-        Music to draw her home."
+        "Some time passes"
 
-        "Music plays"
+        "Portia arrives with Nerissa"
 
-        jessica "I'm never happy when I hear sweet music."
-
-        lorenzo "Your spirits are attentive; music has that effect.
-        Even wild and unruly animals become calm with music.
-        A man without music in his soul is fit for crimes and deceit."
-
-        "Portia enters with Nerissa"
+        show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 100
 
         portia "The light in my hall is burning.
         How far that little candle throws its beams!
         So shines a good deed in a naughty world."
+
+        show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 100
 
         nerissa "When the moon shone, we didn't see the candle."
 
@@ -571,6 +594,11 @@ label level5:
         When no one is around to hear it,
         So a greater glory diminishes a lesser one."
 
+        hide nerissa
+
+        show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.3,yanchor=0.3) with moveinright:
+            yoffset 100
+
         bassanio "Our day will match Australia's and New Zealand's
         If we keep walking around without the sun."
 
@@ -584,6 +612,9 @@ label level5:
         But let's go inside, where you can ask questions,
         And we will answer truthfully."
 
+        hide portia
+        hide bassanio_large_inverted
+        with dissolve
         "All exit."
 
         scene bg pure_black
