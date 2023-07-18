@@ -72,15 +72,16 @@ label level2:
     # Launcelot's choices
     menu:
         "Play tricks": 
+            "(To himself) Oh God, this is my father. He is as blind as a bat and doesn't recognise me. I'll play some tricks on him."
             jump level2_part1_choice1
         "Help his father": 
-            jump level2_part1_choice2
+            "(To himself) This is my father, the old man is as blind as a bat and doesn't recognise me. Let me help him."
+            jump level2_part2_choice2
 
 # LEVEL 2 part 1 - CHOICE 1
 label level2_part1_choice1:
 
     # Dialogues for Choice 1
-    launcelot "(To himself)Oh God, this is my father. He is as blind as a bat and doesn't recognise me. I'll play some tricks on him."
 
     # Continue the conversation with Launcelot tricking Gobbo
 
@@ -104,29 +105,24 @@ label level2_part2_choice1:
     # Dialogues for Choice 1 continuation
     launcelot "Do I look like a crutch or a prop? Do you recognize me, father?"
     gobbo "Alas, sir, I am completely blind. I don't know you."
+    # puzzle here maybe
     jump level2_part2_common
 
-# LEVEL 2 part 2 - CHOICE 2
 label level2_part2_choice2:
-
-    # Dialogues for Choice 2 beginning
-    launcelot "Watch this. Now I'll raise the stakes."
-    launcelot "Are you talking about young Master Launcelot?"
-    gobbo "Not a 'master,' sir, but a poor man's son. His father, though, is an honest, if very poor, man and— thank God—in good health."
-    launcelot "Well, whatever his father is like, we are talking about young Master Launcelot."
-    gobbo "Master, I am speaking of someone simply called Launcelot."
-    launcelot "Ergo, Master Launcelot. Don't talk about Master Launcelot, father. That young gentleman, according to his fate and destiny and so forth, the Three sisters and so on, is deceased. Or, to say it plainly, he has gone to heaven."
-    gobbo "God forbid! In my old age I relied on that boy, like a crutch!"
-    stop music
+    launcelot "Father, it is your son, your own flesh and blood standing before you."
+    gobbo "No sir, I don't believe you. Besides, he is a very poor man's son, and I'm completely blind."
+    jump level2_part2_common
 
 # Common part for both choices
 label level2_part2_common:
 
     # Continue with the story...
-    #play music "audio/bustling_city.opus"
+    play music "audio/bustling_city.opus"
     # LEVEL 2 part 3
     
     # Dialogues for LEVEL 2 part 3
+    # launcelot "Do I look like a crutch or a prop? Do you recognize me, father?"
+    # gobbo "Alas, sir, I am completely blind. I don't know you."
     launcelot "Please, enough fooling around. Give me your blessing. I am Launcelot, who was, is, and will continue to be your son. I am the Jew's servant, and I am sure your wife Margery is my mother."
     gobbo "My wife's name is Margery, indeed. If you're Launcelot, I'll swear you are my own flesh and blood. (He feels the back of LAUNCELOT's head) Good lord, what a beard you have! You have more hair on your chin than my horse Dobbin has on his tail."
     launcelot "It would seem that Dobbin's tail is shrinking, then. I am sure that he had more hair on his tail the last time I saw him than I have on my face."
