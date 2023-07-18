@@ -44,6 +44,10 @@ image masquerade_jessica:
     "masquerade_jessica.png"
     zoom 1.4
 
+image masquerade_lorenzo:
+    "masquerade_lorenzo.png"
+    zoom 1.4
+
 label level2:
     stop music
     # INT. PATHWAY BETWEEN BUILDINGS IN THE STREETS OF VENICE - DAY
@@ -324,9 +328,9 @@ label level2_part13:
 
     "GRATIANO AND SALERIO, DRESSED FOR MASQUERADE, ENTER."
 
-    show masquerade_gratiano at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
+    show masquerade_gratiano at Position(xpos=0.8,xanchor=0.8,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
-    show masquerade_salerio at Position(xpos=0.3,xanchor=0.3,ypos=0.1,yanchor=0.1) with moveinleft:
+    show masquerade_salerio at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     # LEVEL 2 part 13
@@ -337,11 +341,19 @@ label level2_part13:
     gratiano "True, who leaves a feast as hungry as they arrived? What horse retraces its steps with the same enthusiasm? Chasing is more thrilling. Ships return weathered, torn by the wind!"
     salerio "Here comes Lorenzo. We'll discuss this later."
 
+    show masquerade_lorenzo at Position(xpos=0.5,xanchor=0.4,ypos=0.1,yanchor=0.1) with dissolve:
+        yoffset 100
     lorenzo "Forgive my lateness. When you steal your wives, I'll wait too. This is my father-in-law's house. Who's there?"
     jessica "Who are you? I recognize your voice."
+    hide masquerade_salerio 
+    hide masquerade_gratiano
+    show masquerade_lorenzo at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with move:
+        yoffset 100
+    show masquerade_jessica at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with dissolve:
+        yoffset 100
     lorenzo "It's Lorenzo, your love."
-
-    hide masquerade_salerio with dissolve
+    
+    
     
     #play music "audio/love_tune.opus"
     # LEVEL 2 part 14
@@ -359,15 +371,21 @@ label level2_part13:
     # LEVEL 2 part 16
     lorenzo "I love her wholeheartedly. She's wise, beautiful, and loyal."
     jessica "I'm here. Let's go! They're waiting at the masquerade."
-    hide lorenzo with dissolve
-    hide jessica with dissolve
+    hide masquerade_lorenzo
+    hide masquerade_jessica
+    with dissolve
 
     stop music
     #play music "audio/puzzling_tune.opus"
 
     antonio "Who's there?"
-    show antonio with fade
+    show antonio at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 100
+
     gratiano "Antonio?"
+
+    show masquerade_gratiano at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        yoffset 100
 
     # LEVEL 2 part 17
     antonio "Gratiano, where's everyone? No masquerade. Bassanio boards soon. I sent twenty to find you."
@@ -375,8 +393,9 @@ label level2_part13:
 
     stop music
 
-    hide antonio with dissolve
-    hide gratiano with dissolve
+    hide antonio 
+    hide masquerade_gratiano
+    with dissolve
 
     "THE END OF LEVEL 2"
 

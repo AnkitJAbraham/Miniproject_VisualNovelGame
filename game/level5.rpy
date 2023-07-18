@@ -2,6 +2,10 @@ define duke= Character(_("Duke"), color="#8a0000")
 
 define stephano= Character(_("Stephano"), color="#87e70a")
 
+
+image jessica_large:
+    "jessica.png"
+    zoom 1.4
 image antonio_large:
     "antonio.png"
     zoom 1.3
@@ -456,17 +460,23 @@ label level5:
 
         scene bg pure_black
         "All exit."
-        
+
         scene bg moonlit_pathway
 
         "On a moonlit pathway outside Portia's house in Belmont."
 
         "Lorenzo enters with Jessica"
 
+        show lorenzo_large_right at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 150
+
         lorenzo "On such a night, gentle winds kissed the trees,
         As Troilus sighed for Cressida on the walls.
         Thisbe, careful and tiptoeing in the dew,
         Fled in fear from the lion's shadow."
+
+        show jessica_large at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 150
 
         jessica "On such a night, Dido stood with a willow branch,
         Waving to her love, beckoning him back to Carthage."
