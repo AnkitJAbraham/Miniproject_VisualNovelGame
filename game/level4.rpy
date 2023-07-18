@@ -8,7 +8,9 @@ define lorenzo= Character(_("Lorenzo"), color="#8f00f5")
 define jessica= Character(_("Jessica"), color="#d60093")
 define balthazar= Character(_("Balthazar"), color="#00b6d6")
 
-
+image balthazar_inverted:
+    "balthazar_inverted.png"
+    zoom 0.8
 
 image solanio_right:
     "solanio_right.png"
@@ -31,6 +33,10 @@ image man:
 image lorenzo_left:
     "lorenzo_left.png"
     zoom 1.3
+
+image jessica_large:
+    "jessica.png"
+    zoom 1.4
 
 label level4:
     scene bg pure_black
@@ -227,14 +233,26 @@ label level4:
     "Lorenzo exits"
     "Jessica enters"
 
+    show jessica_large at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 120
+
     jessica "I wish you contentment, my lady."
 
+    
 
     portia "Thank you for your wish, and I am pleased to wish you the same. Farewell, jessica."
+
+    "Jessica exits"
+
+    hide jessica_large
     "She gives balthazar a letter"
     portia "Balthazar, I trust your honesty. Take this letter to my cousin, Doctor Bellario, in Padua. Bring back his notes and clothes and swiftly travel to Venice. Avoid unnecessary conversations and make haste. I will reach Venice before you."
 
+    show balthazar_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        yoffset 120
+
     balthazar "Madam, I will go as quickly as I can."
+    hide balthazar_inverted
     "Balthazar exits."
 
     portia "Come on, nerissa, I have a plan you don't know about yet. We'll see our husbands before they even think of us."
