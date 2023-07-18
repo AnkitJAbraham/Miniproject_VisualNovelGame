@@ -163,6 +163,7 @@ label level5:
             lorenzo "(Decides not to pursue the cryptic message further.) I can't
             see how this will change the situation. Let's continue with the
             proceedings."
+            hide lorenzo_large_right
     if(weight==5):
         scene bg courtroom_interior
         show duke_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1):
@@ -228,9 +229,6 @@ label level5:
 
         antonio "Thank you, sir."
 
-        scene bg pure_black
-        "All exit."
-
         jump ending
 
     elif(weight==6):
@@ -254,7 +252,7 @@ label level5:
 
         hide shylock
 
-        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
             yoffset 150
 
         portia "(As Balthazar)(encouragingly) Shylock, this is a moment of great wisdom.
@@ -262,22 +260,44 @@ label level5:
 
         hide portia_balthazar
 
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4):
+                yoffset 100
         shylock "(softly) Yes, you are right. I have been blinded by my anger and
         hurt, but I see now that there is a better path."
 
-        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
-            yoffset 100
+        hide shylock
             
+        show antonio_large at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 100
         antonio "(surprised) Shylock, are you saying you forgive me?"
+        hide antonio_large
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4):
+                yoffset 100
 
         shylock "(nods) Yes, Antonio. I release you from the bond. The pound of
         flesh is yours to keep, and you shall owe me nothing."
 
+        hide shylock
+
+        show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 100
+
         bassanio "(grateful) We cannot thank you enough, Shylock. Your act of
         forgiveness is beyond measure."
 
+        hide bassanio_large_inverted
+
         duke "(relieved) This is a moment of true justice and compassion. May it
         be a lesson to us all."
+
+        hide duke_inverted
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
+                yoffset 100
+
+        show portia_balthazar_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 150
 
         portia "(As Balthazar)(with admiration) Your act of forgiveness shall be remembered,
         Shylock. It is a testament to the power of mercy and understanding."
@@ -285,12 +305,28 @@ label level5:
         jump ending
 
     elif(weight==7):
+
+        show duke_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1):
+            yoffset 100
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4):
+            yoffset 100
         shylock "(with a determined tone) Your Honor, the bond is clear, and the
         law is on my side. Antonio signed the agreement willingly, and now he
         must pay the price. A pound of his flesh shall be mine."
 
+        hide shylock
+
+        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 150
+
         portia "(trying to reason) Shylock, please reconsider. We seek justice,
         not revenge. Let us find another way to settle this debt."
+
+        hide portia_balthazar
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4):
+            yoffset 100
 
         shylock "(adamant) No, there is no other way. He has mocked me, spit
         on my beliefs, and now he shall suffer the consequences."
@@ -301,15 +337,35 @@ label level5:
         shylock "(with bitterness) Mercy? Has Antonio ever shown mercy to my
         people? No, I will have my bond."
 
+        hide shylock 
+
+        show antonio_large at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 100
+
         antonio "(with resignation) I understand the consequences of my
         actions. I am prepared to pay the price."
 
+        hide antonio_large
+
+        show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 100
+
         bassanio "(pleading) Balthazar, is there nothing we can do?"
+
+        hide bassanio_large_inverted
+
+        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 150
 
         portia "I am afraid not Bassanio"
 
+        hide portia_balthazar
+
         duke "The law is clear, and Shylock has the right to his
         bond. I am bound by my duty as a judge."
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
+            yoffset 100
 
         shylock "(victorious) Very well, let us proceed with the judgment."
 
@@ -318,36 +374,89 @@ label level5:
         "(Game Over)- Antonio is killed."
 
         return 
-    else:
+    else:#weight =8
+
+        scene bg courtroom_interior
+
+        show duke_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1):
+            yoffset 100
+
+        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 150
+
         portia "(trying to reason) Shylock, please reconsider. We seek justice,
         not revenge. Let us find another way to settle this debt."
+
+        hide portia_balthazar
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
+            yoffset 100
 
         shylock "(pauses, taking a deep breath) Your Honor, I have listened to
         the pleas and witnessed the compassion of those before me. While the
         bond is just, I have come to realize that vengeance will not bring me the
         peace I seek"
 
+        show portia_balthazar at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 150
+
         portia "(encouragingly) Shylock, this is a moment of great wisdom.
         Mercy can heal wounds that revenge only deepens."
+
+        hide portia_balthazar
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
+            yoffset 100
 
         shylock "(softly) Yes, you are right. I have been blinded by my anger and
         hurt, but I see now that there is a better path."
 
+        hide shylock
+
+        show antonio_large at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+            yoffset 100
+
         antonio "(surprised) Shylock, are you saying you forgive me?"
+
+        hide antonio_large
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4):
+            yoffset 100
 
         shylock "(nods) Yes, Antonio. I release you from the bond. The pound of
         flesh is yours to keep, and you shall owe me nothing."
 
+        hide shylock 
+
+        show bassanio_large_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1):
+            yoffset 100
+
         bassanio "(grateful) We cannot thank you enough, Shylock. Your act of
         forgiveness is beyond measure."
 
+        hide bassanio_large_inverted
+
         duke "(relieved) This is a moment of true justice and compassion. May it
         be a lesson to us all."
+
+        hide duke_inverted
+
+        "The case ends with Shylock forgiving Antonio for being unable to pay his debt.The court is dismissed"
+
+        show shylock at Position(xpos=0.9,xanchor=0.9,ypos=0.4,yanchor=0.4) with moveinright:
+                yoffset 100
+
+        show portia_balthazar_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+            yoffset 150
 
         portia "(with admiration) Your act of forgiveness shall be remembered,
         Shylock. It is a testament to the power of mercy and understanding."
 
     label ending:
+
+        scene bg pure_black
+        "All exit."
+        
         scene bg moonlit_pathway
 
         "On a moonlit pathway outside Portia's house in Belmont."
