@@ -60,6 +60,10 @@ label level2:
     show launcelot at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
+    "Here we see Launcelot Gobbo, Bassanio’s servant. A comical, clownish figure who is especially adept at making puns."
+
+    "And his father Gobbo, also a servant in Venice, quite frail and old."
+
     # Dialogues
     launcelot "Part of me wants to flee from my master, this Jew. My conscience advises me to stay, but the devil is more friendly in urging me to run away."
 
@@ -168,6 +172,8 @@ label level2_part2_common:
     # LEVEL 2 part 7
     "Jessica and Launcelot the clown enter."
 
+    "Jessica is Shylock’s daughter, although she hates life in her father’s house and under his shadow."
+
     show launcelot at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
     show jessica_large_inverted at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
@@ -188,6 +194,12 @@ label level2_part2_common:
     hide jessica_large_inverted with dissolve
 
     "Gratiano, Lorenzo, Salerio, and Solanio enter."
+
+    "Gratiano is a friend of Bassanio’s; a coarse and garrulous young man."
+
+    "Salaerio and Solanio are Venetian gentlemen and friends of Antonio, Lorenzo and Bassanio."
+
+    "Lorenzo is similarly a friend of Bassanio and Antonio and is in love with Shylock’s daughter, Jessica."
 
     show gratiano_left at Position(xpos=0.7,xanchor=0.7,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
@@ -321,7 +333,11 @@ label level2_part10_choice2:
 label level2_part13:
     scene bg masquerade_party
 
-    "GRATIANO AND SALERIO, DRESSED FOR MASQUERADE, ENTER."
+    "Gratiano and salerio, dressed for masquerade, enter."
+
+    "The masquerade party is huge bash where all the gentlemen, lords and ladies of Venice are invited to celebrate."
+
+    "All the guests of the masquerade party wear exquisite masks, so that no one recognizes them easily."
 
     show masquerade_gratiano at Position(xpos=0.8,xanchor=0.8,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
