@@ -222,7 +222,7 @@ label level4:
 
     lorenzo "Madam, your kindness and support for your husband's friend reflect your noble and genuine goodwill."
 
-    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show portia1 at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
     portia "I have no regrets in doing good. antonio resembles my husband. lorenzo, manage my household. I retreat to a nearby monastery with nerissa until our husbands return."
 
@@ -237,8 +237,6 @@ label level4:
         yoffset 120
 
     jessica "I wish you contentment, my lady."
-
-    
 
     portia "Thank you for your wish, and I am pleased to wish you the same. Farewell, jessica."
 

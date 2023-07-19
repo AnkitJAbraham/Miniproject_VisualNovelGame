@@ -2,11 +2,19 @@ image bassanio_large:
     "bassanio.png"
     zoom 1.3
 
+image portia1:
+    "portia.png"
+    zoom 1.3
+
+image portia_inverted1:
+    "portia_inverted.png"
+    zoom 1.3
+
 label level3:
     stop music
     scene bg pure_black
     "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
-    Nerissa discuss the intriguing ‘lottery’ that Portia’s father devised
+    Nerissa discuss the intriguing 'lottery' that Portia's father devised
     before his death."
     scene bg portia_house_belmont_day
 
@@ -19,7 +27,7 @@ label level3:
     nerissa "I am sure whoever chooses correctly will be a man who will love you well. But what are your
     feelings toward the princely suitors who have already paid you visits?"
 
-    show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+    show portia1 at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
         yoffset 100
 
     portia "The prince of naples talkes about his horses all the time and I'm
@@ -31,7 +39,7 @@ label level3:
     portia "Yes, yes, it was Bassanio — I think that was his name."
     nerissa "That's right, madam. Of any man my foolish eyes have ever seen, he
     was the one most deserving of a beautiful lady."
-    hide portia
+    hide portia1
     hide nerissa
     scene bg portia_house_belmont_day
     "Portia and Nerissa are interrupted by trumpets "
@@ -47,7 +55,7 @@ label level3:
     but esteemed beauties of my land love me. I treasure my dark skin,
     except for desiring your kind opinion of me."
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "When it comes to selecting a husband, I value qualities beyond mere
@@ -78,11 +86,11 @@ label level3:
     moroccan_prince "I promise. Come on, bring me to the caskets."
 
     hide moroccan_prince
-    hide portia_inverted
+    hide portia_inverted1
 
     "Trumpets play. The Prince of Arragon and his attendants enter interrupting Portia and the Moroccan prince"
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "Ah, the Prince of Arragon has arrived. Welcome to my house, noble prince. You have come to participate in the lottery, I presume?"
@@ -92,7 +100,7 @@ label level3:
 
     arragon_prince "Indeed, fair Portia. I have graced this occasion with my presence, fully confident in my ability to choose wisely."
 
-    hide portia_inverted
+    hide portia_inverted1
 
     show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
@@ -109,7 +117,7 @@ label level3:
     they are interrupted by the sudden arrival of Bassanio at Portia's house to participate in her father's lottery."
 
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "Gentlemen, it seems we have another guest. Bassanio, welcome! Are you here to partake in the lottery as well?"
@@ -120,7 +128,7 @@ label level3:
     bassanio "Indeed, fair Portia. I have come to take my chance, hoping to win not only your hand 
     but also the honor and privilege of being your husband."
     
-    hide portia_inverted
+    hide portia_inverted1
 
     show moroccan_prince_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
@@ -140,7 +148,7 @@ label level3:
 
     hide bassanio_large
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia  "Gentlemen, to ensure fairness and transparency, I invite all three of you to accompany me to 
@@ -222,7 +230,7 @@ label gold_bassanio:
 
     "Bassanio opens the golden casket to find a jigsaw puzzle"
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "Bassanio you have chosen the Golden casket"
@@ -242,7 +250,7 @@ label silver_bassanio:
 
     "Bassanio opens the silver casket to find a jigsaw puzzle"
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "Bassanio you have chosen the Silver casket"
@@ -263,7 +271,7 @@ label lead_bassanio:
 
     "Bassanio opens the lead casket to find a portrait of portia"
 
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
 
     portia "Bassanio,you have proven your worthiness by choosing the right casket"
@@ -273,7 +281,7 @@ label lead_bassanio:
     and friends for your admiration. Inexperienced but willing to learn. My
     devoted spirit is yours. My possessions, mansion, servants, and ring,
     all yours. Preserve our love with the ring."
-    hide portia_inverted
+    hide portia_inverted1
     "Bassanio successfully completes the lottery and proceeds to marry Portia"
     "END OF LEVEL 3"
     jump level4
@@ -283,7 +291,7 @@ label lead_bassanio:
 label jigsaw_complete:
     scene bg caskets
     "The jigsaw puzzle turned out to be a portrait of Portia"
-    show portia_inverted at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
+    show portia_inverted1 at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
         yoffset 100
     portia "Bassanio,you have proven your worthiness"
     portia "I aspire to surpass myself for you. Twentyfold worth, a
@@ -291,7 +299,7 @@ label jigsaw_complete:
     and friends for your admiration. Inexperienced but willing to learn. My
     devoted spirit is yours. My possessions, mansion, servants, and ring,
     all yours. Preserve our love with the ring."
-    hide portia_inverted
+    hide portia_inverted1
     "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
     "END OF LEVEL 3"
     jump level4

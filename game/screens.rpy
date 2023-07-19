@@ -766,20 +766,7 @@ screen preferences():
                     label _("Language")
 
                     textbutton "English" text_font "DejaVuSans.ttf" action Language(None)
-                    textbutton "Français" text_font "DejaVuSans.ttf" action Language("french")
-                    textbutton "Bahasa Melayu" text_font "DejaVuSans.ttf" action Language("malay")
-                    textbutton "Русский" text_font "DejaVuSans.ttf" action Language("russian")
-                    textbutton "Español" text_font "DejaVuSans.ttf" action Language("spanish")
 
-                vbox:
-                    style_prefix "radio"
-                    label _(" ")
-
-                    textbutton "Українська" text_font "DejaVuSans.ttf" action Language("ukrainian")
-                    textbutton "日本語" text_font "SourceHanSansLite.ttf" action Language("japanese")
-                    textbutton "한국어" text_font "SourceHanSansLite.ttf" action Language("korean")
-                    textbutton "简体中文" text_font "SourceHanSansLite.ttf" action Language("schinese")
-                    textbutton "繁體中文" text_font "SourceHanSansLite.ttf" action Language("tchinese")
 
 #end language_picker
 
@@ -795,9 +782,6 @@ screen preferences():
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
 
                 vbox:
 

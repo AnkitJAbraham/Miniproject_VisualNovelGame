@@ -39,8 +39,12 @@ label start:
             "Level 3"
             jump level3
         "Level 4":
+            scene bg level4
+            "Level 4"
             jump level4
         "Level 5":
+            scene bg level5
+            "Level 5"
             jump level5
     
     return

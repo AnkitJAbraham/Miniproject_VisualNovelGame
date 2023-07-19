@@ -567,7 +567,7 @@ label level5:
 
         "Portia arrives with Nerissa"
 
-        show portia at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
+        show portia1 at Position(xpos=0.2,xanchor=0.2,ypos=0.1,yanchor=0.1) with moveinleft:
             yoffset 100
 
         portia "The light in my hall is burning.
@@ -612,7 +612,7 @@ label level5:
         But let's go inside, where you can ask questions,
         And we will answer truthfully."
 
-        hide portia
+        hide portia1
         hide bassanio_large_inverted
         with dissolve
         "All exit."
