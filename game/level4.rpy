@@ -268,6 +268,25 @@ label level4:
 
     portia "What a question! Seeking intimacy with men? Your mind is in the wrong place. But let's go, I'll explain my plan in the carriage at the gate. Hurry, we have twenty miles to cover today."
 
+    # jump shortest_path_portia
+
+    scene bg pure_black
+    "Antonio and Bassanio must now visit Shylock through the shortest available path"
+
+    scene venice_map_graph
+
+    "Guide Portia and Nerissa through the forests and countrysides of Rome."
+    $path=renpy.input("What is the shortest path in the given graph from A to J ??")
+    
+    $path=lowercase(path)
+    
+    if(path=="abdecfghj"):
+        pass
+    else:
+        scene bg game_over
+        "Game over"
+        return
+    
     scene bg pure_black
     "Portia disguises herself as the lawyer Balthazar and proceeds to go to Court of Justice in Venice"
     "END OF LEVEL 4"
