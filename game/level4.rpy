@@ -50,7 +50,7 @@ label level4:
         yoffset 100
     solanio "What's the latest news from the Rialto?"
 
-    salerio "Well, there's a rumor going around that antonio lost a ship with valuable cargo on the dangerous sandbar called The Goodwins in the English Channel. If the gossip is true, it's a significant loss."
+    salerio "Well, there's a rumor going around that Antonio lost a ship with valuable cargo on the dangerous sandbar called The Goodwins in the English Channel. If the gossip is true, it's a significant loss."
     
     "Would you like to continue the conversation"
     menu:
@@ -288,7 +288,10 @@ label level4:
         return
     
     scene bg pure_black
-    "Portia disguises herself as the lawyer Balthazar and proceeds to go to Court of Justice in Venice"
+    "Portia, finding no other way to help her lover and his friend, disguises herself as the lawyer Balthazar and proceeds to go to Court of Justice in Venice."
+
+    "Will she succeed ??"
+
     "END OF LEVEL 4"
     jump level5
 
