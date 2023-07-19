@@ -615,11 +615,15 @@ label level5:
         hide portia1
         hide bassanio_large_inverted
         with dissolve
+
+        "All the people, Lorenzo and Jessica, Portia and Bassanio, Nerissa and Launcelot are pleased with this eventual outcome, and furthermore so, when they learn of Antonio's ships returning back safely, as well as Shylock's inheritance."
+     
         "All exit."
+ 
 
         scene bg pure_black
         "END OF LEVEL 5"
-        "Thank you for playing Merchant of Venice"
+        "Thank you for playing our beloved game "The Merchant Of Venice" till the end. Congratulations on beating it !!"
         return 
 
 
