@@ -5,14 +5,18 @@ init python:
 label level1:
     scene bg streets_of_venice
     play music "audio/bustling_city.opus"
+
+    "The Merchant Of Venice, game plot adapted from the eponymous play by Sir William Shakespeare."
     
     "The bustling city of Venice is alive with merchants, sailors, and locals going about their daily business."
 
-    "Antonio is a noble man, and money lender in the city of Venice"
+    "Antonio is an illustrious nobleman, and generous moneylender in the city of Venice"
 
     "He is liked by most of the people in the city, due to his kind nature of lending money at low interest rates"
 
-    "He has a friend named Bassanio who was more like his brother. He would do anything for Bassanio."
+    "He has a friend named Bassanio, who was more like his brother. He would do anything for Bassanio."
+
+    "Bassanio is also a gentleman of Venice, and a kinsman and dear friend to Antonio. 
 
     "The story begins with Antonio meeting Bassanio at the Venice market"
     
