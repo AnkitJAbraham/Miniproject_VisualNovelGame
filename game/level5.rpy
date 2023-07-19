@@ -76,7 +76,7 @@ label level5:
     and a chance to find solace in a new community."
 
     scene bg outside_courtroom
-    "The scene shifts to The Court of Justice in Venice where Antonio is being tried"
+    "The scene shifts to The Court of Justice in Venice where Antonio is on trial for the improper proceedings of not returning lent money to Shylock and breaking their agreement."
 
     scene bg courtroom_interior
     "The Duke of Venice enters along with the Nobles, Antonio, Bassanio, Gratiano, Salerio, and
