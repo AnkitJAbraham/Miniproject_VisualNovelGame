@@ -16,6 +16,11 @@ label level3:
     "The scene shifts to Belmont,where the heiress Portia and her waiting woman and friend
     Nerissa discuss the intriguing 'lottery' that Portia's father devised
     before his death."
+
+   "Portia is a wealthy heiress from Belmont. Portia’s beauty is matched only by her intelligence. Bound by a clause in her father’s will that forces her to marry whichever suitor chooses correctly in a contest."
+
+   "Nerissa is Portia’s lady-in-waiting, friend and confidante."
+
     scene bg portia_house_belmont_day
 
     show nerissa at Position(xpos=0.9,xanchor=0.9,ypos=0.1,yanchor=0.1) with moveinright:
@@ -42,7 +47,8 @@ label level3:
     hide portia1
     hide nerissa
     scene bg portia_house_belmont_day
-    "Portia and Nerissa are interrupted by trumpets "
+    "Portia and Nerissa are interrupted by the sound of trumpets "
+    "The contest for the hand of Portia in marriage has started, and prospective suitors have started arriving."
     "The Prince of Morocco, a dark-skinned African dressed in white, and
     three or four followers enter portia's house to take part in the lottery"
 
@@ -300,7 +306,7 @@ label jigsaw_complete:
     devoted spirit is yours. My possessions, mansion, servants, and ring,
     all yours. Preserve our love with the ring."
     hide portia_inverted1
-    "Bassanio successfully completes the jigsaw puzzle and proceeds to marry Portia"
+    "Bassanio successfully completes the jigsaw puzzle and proceeds to win the hand of Portia in marriage."
     "END OF LEVEL 3"
     jump level4
 
