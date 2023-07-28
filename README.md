@@ -1,4 +1,3 @@
-# Miniproject_VisualNovelGame
 <h1>Miniproject Repository - Visual Novel Based Game</h1>
 Official repository for our group miniproject submission - Interactive Visual Novel Based Game
 
@@ -9,4 +8,9 @@ Official repository for our group miniproject submission - Interactive Visual No
   <li>Ashwin Saji</li>
   <li>Alwin Shibu</li>
   <li>Christopher Jacob</li>
+</ul>
+<h2>Project Websites</h2>
+<ul>
+  <li><h4>Showcase Website - <a href="https://visualnovelgame.netlify.app/">https://visualnovelgame.netlify.app/</a></h4></li>
+  <li><h4>Game Hosting Directory Website - <a href="https://spacecraft04.itch.io/the-merchant-of-venice">https://spacecraft04.itch.io/the-merchant-of-venice</a></h4></li>
 </ul>
