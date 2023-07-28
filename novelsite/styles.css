@@ -1,0 +1,275 @@
+@media (max-width: 449px) {
+  .top-bar {
+   font-size: 24px;
+   float: left;
+  }
+
+  .h1 {
+    display: table;
+    margin: 0px 20px 0px auto;
+  }
+
+  .interact {
+    float: left;
+    margin: auto 20px 0px auto;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    display: table;
+    margin: 0px auto 0px 20px;
+  }
+  
+  h2 {
+    display: table;
+    margin: 0px auto 0px auto;
+    padding: 3px;
+    font-size: 38px;
+    background: linear-gradient(#e66465, #9198e5);
+    color: #fff;
+  }
+
+  body {
+    font-family: 'Tangerine', serif;
+    font-size: 36px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#FFF4EC,#F9F9ED);
+    color: black;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button2 {
+    font-family: 'Inconsolata';
+    margin-left: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4B0082;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px;
+  }
+  
+  .top-bar {
+    position: sticky;
+    top: 0;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(to right, blue, green);
+    opacity: 0.8;
+    color: white;
+    justify-content: center;
+ }
+  
+  .intro {
+    padding: 20px;
+    margin-left: 0px;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .objective {
+    padding: 20px;  
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .divx {
+    margin-left: 40px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-left: 0px;    
+    justify-content: center;
+    font-family: 'MedievalSharp';
+  }
+
+  .paddedvalue {
+    padding: 20px;    
+    justify-content: center;
+  }
+
+  .features {
+    padding: 20px;  
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .puzzles {
+    padding: 20px;  
+    justify-content: center;
+    // background-color: #fff;
+  }
+
+  .paddedvaluez {
+    padding: 20px;    
+    justify-content: center;
+    background-color: #fff;
+  } 
+  
+  .button-container {
+    margin: 0 auto;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .button {
+    font-family: 'Inconsolata';
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background-color: #45CFDD;
+  }  
+  
+  .heading-image {
+    margin: auto;
+    width: 75%;
+    height: 50%;
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
+  .heading-image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+  }
+  
+  .gameplay {
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 1.5rem; 
+    padding: 20px;
+  }
+  
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+  }
+
+  
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+div.container {
+  text-align: center;
+}
+
+.button-section{
+  text-align: center;
+}
+
+.subheading {
+  background-image: linear-gradient(to right, blue, green);
+  color: white;
+}
+
+.presentinga{
+  font-family: 'MedievalSharp';
+  font-size: 32px;
+  padding: 50px;
+}
+
+.presentingb {
+  text-align: center;
+  border: 2px solid #4CAF50;
+  padding: 50px;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 50%;
+  background-image: linear-gradient(to right, blue, green);
+  opacity: 0.6;
+  color: white;
+  justify-content: center;
+}
+
+.presentingb h1 {
+    display: inline;
+}
+
+.game {
+  padding: 20px;    
+  justify-content: center;
+}
+
+.iframe-margin {
+  padding-bottom: 700px;
+  justify-content: center;
+}
+
