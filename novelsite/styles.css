@@ -1,7 +1,7 @@
 @media (max-width: 449px) {
   .top-bar {
-   font-size: 24px;
-   float: left;
+    font-size: 24px;
+    float: left;
   }
 
   .h1 {
@@ -13,178 +13,199 @@
     float: left;
     margin: auto 20px 0px auto;
   }
+
+  .max-w-6xl {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md-py-20 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-  }
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
-  h1 {
-    display: table;
-    margin: 0px auto 0px 20px;
-  }
-  
-  h2 {
-    display: table;
-    margin: 0px auto 0px auto;
-    padding: 3px;
-    font-size: 38px;
-    background: linear-gradient(#e66465, #9198e5);
-    color: #fff;
-  }
+h1 {
+  display: table;
+  margin: 0px auto 0px 20px;
+}
 
-  body {
-    font-family: 'Tangerine', serif;
-    font-size: 36px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(#FFF4EC,#F9F9ED);
-    color: black;
-  }
+h2 {
+  display: table;
+  margin: 0px auto 0px auto;
+  padding: 3px;
+  font-size: 38px;
+  background: linear-gradient(#e66465, #9198e5);
+  color: #fff;
+}
 
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button2 {
-    font-family: 'Inconsolata';
-    margin-left: auto;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4B0082;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 4px;
-  }
-  
-  .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    background-image: linear-gradient(to right, blue, green);
-    opacity: 0.8;
-    color: white;
-    justify-content: center;
- }
-  
-  .intro {
-    padding: 20px;
-    margin-left: 0px;
-    justify-content: center;
-    background-color: #fff;
-  }
+body {
+  font-family: "Barlow", serif;
+  font-size: 36px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#fff4ec, #f9f9ed);
+  color: black;
+}
 
-  .objective {
-    padding: 20px;  
-    justify-content: center;
-    background-color: #fff;
-  }
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .divx {
-    margin-left: 40px;
-  }
+.button2 {
+  font-family: "Inter";
+  margin-left: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4b0082;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 4px;
+}
 
-  .heading {
-    text-align: center;
-    margin-left: 0px;    
-    justify-content: center;
-    font-family: 'MedievalSharp';
-  }
+.top-bar {
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-image: linear-gradient(to right, blue, green);
+  opacity: 0.8;
+  color: white;
+  justify-content: center;
+}
 
-  .paddedvalue {
-    padding: 20px;    
-    justify-content: center;
-  }
+.intro {
+  padding: 20px;
+  margin-left: 0px;
+  justify-content: center;
+  background-color: #fff;
+}
 
-  .features {
-    padding: 20px;  
-    justify-content: center;
-    background-color: #fff;
-  }
+.objective {
+  padding: 20px;
+  justify-content: center;
+  background-color: #fff;
+}
 
-  .puzzles {
-    padding: 20px;  
-    justify-content: center;
-    // background-color: #fff;
-  }
+.divx {
+  margin-left: 40px;
+}
 
-  .paddedvaluez {
-    padding: 20px;    
-    justify-content: center;
-    background-color: #fff;
-  } 
-  
-  .button-container {
-    margin: 0 auto;
-    width: 50%;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-  }
-  
-  .button {
-    font-family: 'Inconsolata';
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 4px;
-  }
+.heading {
+  text-align: center;
+  margin-left: 0px;
+  justify-content: center;
+  font-family: "MedievalSharp";
+}
 
-  .button:hover {
-    background-color: #45CFDD;
-  }  
-  
-  .heading-image {
-    margin: auto;
-    width: 75%;
-    height: 50%;
-    border: 2px solid #4CAF50;
-    border-radius: 15px;
-    overflow: hidden;
-    object-fit: cover;
-    vertical-align: bottom;
-  }
-  
-  .heading-image img {
-    width: 100%;
-    height: 100%;
-    vertical-align: bottom;
-  }
-  
-  .gameplay {
-    background-color: #fff;
-    padding: 20px;
-  }
+.paddedvalue {
+  padding: 20px;
+  justify-content: center;
+  padding-top: 100px;
+}
 
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 1.5rem; 
-    padding: 20px;
-  }
-  
-  .gallery__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; 
-  }
+.features {
+  padding: 20px;
+  justify-content: center;
+  background-color: #fff;
+}
 
-  
+.puzzles {
+  padding: 20px;
+  justify-content: center;
+  // background-color: #fff;
+}
+
+.paddedvaluez {
+  padding: 20px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.button-container {
+  margin: 0 auto;
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.button {
+  font-family: "Inter";
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #45cfdd;
+}
+
+.heading-image {
+  margin: auto;
+  width: 75%;
+  height: 50%;
+  border: 2px solid #4caf50;
+  border-radius: 15px;
+  overflow: hidden;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.heading-image img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.gameplay {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 1.5rem;
+  padding: 20px;
+}
+
+.gallery__item:hover .gallery__img {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-out; /* Adding transition property */
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease-out; /* Adding transition property */
+}
+
 .gallery__item--1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -231,7 +252,7 @@ div.container {
   text-align: center;
 }
 
-.button-section{
+.button-section {
   text-align: center;
 }
 
@@ -240,15 +261,15 @@ div.container {
   color: white;
 }
 
-.presentinga{
-  font-family: 'MedievalSharp';
+.presentinga {
+  font-family: "MedievalSharp";
   font-size: 32px;
   padding: 50px;
 }
 
 .presentingb {
   text-align: center;
-  border: 2px solid #4CAF50;
+  border: 2px solid #4caf50;
   padding: 50px;
   margin: 0 auto;
   width: 50%;
@@ -260,11 +281,11 @@ div.container {
 }
 
 .presentingb h1 {
-    display: inline;
+  display: inline;
 }
 
 .game {
-  padding: 20px;    
+  padding: 20px;
   justify-content: center;
 }
 
@@ -273,3 +294,77 @@ div.container {
   justify-content: center;
 }
 
+.bg-gray {
+  background-color: #27282A;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-10 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.h-0.5 {
+  height: 0.125rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.space-y-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.md-items-center {
+  align-items: center;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.textChange {
+  background-color: #fff;
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.textColor {
+  color: #fff;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.footer > div {
+  padding: 10px;
+}
