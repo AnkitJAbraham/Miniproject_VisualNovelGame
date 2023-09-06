@@ -138,8 +138,8 @@ init python:
             return self.get_card(card).rotate.rotate_limit()
             
         def add_marker(self, card, marker):
-             self.get_card(card).markers.append(marker)
-             renpy.redraw(self, 0)
+            self.get_card(card).markers.append(marker)
+            renpy.redraw(self, 0)
 
         def remove_marker(self, card, marker):
             self.get_card(card).markers.remove(marker)
@@ -151,7 +151,7 @@ init python:
 
         # Called to create a new stack.
         def stack(self, x, y, xoff=0, yoff=0, show=1024, base=None,
-                  click=False, drag=DRAG_NONE, drop=False, hidden=False):
+            click=False, drag=DRAG_NONE, drop=False, hidden=False):
 
             rv = __Stack(self, x, y, xoff, yoff, show, base, click, drag, drop, hidden) 
             

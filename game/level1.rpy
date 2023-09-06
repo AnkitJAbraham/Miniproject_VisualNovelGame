@@ -16,7 +16,7 @@ label level1:
 
     "He has a friend named Bassanio, who was more like his brother. He would do anything for Bassanio."
 
-    "Bassanio is also a gentleman of Venice, and a kinsman and dear friend to Antonio. 
+    "Bassanio is also a gentleman of Venice, and a kinsman and dear friend to Antonio." 
 
     "The story begins with Antonio meeting Bassanio at the Venice market"
     
@@ -92,6 +92,7 @@ label visit_valentino:
 
         "Decline":
             antonio "Bassanio my friend, if it's Shylock we have to visit then i must decline"
+            "Since Antonio declined Bassanio's request to visit shylock their story ends here"
             return
 
 

@@ -17,9 +17,9 @@ label level3:
     Nerissa discuss the intriguing 'lottery' that Portia's father devised
     before his death."
 
-   "Portia is a wealthy heiress from Belmont. Portia’s beauty is matched only by her intelligence. Bound by a clause in her father’s will that forces her to marry whichever suitor chooses correctly in a contest."
+    "Portia is a wealthy heiress from Belmont. Portia’s beauty is matched only by her intelligence. Bound by a clause in her father’s will that forces her to marry whichever suitor chooses correctly in a contest."
 
-   "Nerissa is Portia’s lady-in-waiting, friend and confidante."
+    "Nerissa is Portia’s lady-in-waiting, friend and confidante."
 
     scene bg portia_house_belmont_day
 

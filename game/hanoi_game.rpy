@@ -126,11 +126,7 @@ screen moves_count_scr():
 
 init python:
     def check_game_state():
-        '''
-        This function checks if all the blocks are in one
-        tower at the finish pole and return True or False.
-        '''
-                
+               
         global towers, finish_tower, blocks_number
         if len(towers[finish_tower]["blocks"]) == blocks_number:
             return True
@@ -138,12 +134,7 @@ init python:
 
 
     def hanoi_moves_count(x):
-        '''
-        This function counts the number of moves one must proceed
-        to move the whole tower from start pole to finish one.
-        x - number of blocks in tower
-        '''
-        
+    
         if x == 1:
             return 1
         elif x > 1:
@@ -154,51 +145,15 @@ init python:
         
     
     def make_path_2(t, x, f):
-        '''
-        Use this function to get result of "hanoi_func_2"
-        t - towers description that should be a list
-            of 3 lists which  contents the blocks numbers
-        x - number of the biggest block
-        f - number of the pole where tower should be moved to
-        
-        This function will work even if some blocks was already moved
-        from start tower to another pole.
-        Note that this function will work correct only if blocks
-        in each tower placed correct (the small one over the large, like
-        [ [3], [1, 2, 4], [] ]), in case you will try to randomly
-        generate the game state.
-        '''
-        
-        ####
         # the general list of moves
         global res_2
         res_2 = []
         
         return hanoi_func_2(t, x, f)
         
-        
-
-
     def hanoi_func_2(t, x, f):
-        '''
-        t - towers description that should be a list
-            of 3 lists which  contents the blocks numbers
-        x - number of the biggest block
-        f - number of the pole where tower should be moved to
-        
-        The function returns the list of tuples that are
-        (start_pole, finish_pole) that describes moves that
-        should be made from last to first to win the game.
-        
-        So when function will return that list, one should pop
-        tuples out of it one after another and move blocks
-        from "start_pole" position to "finish_pole" position.
-        '''
-        
         global res_2
         
-        ####
-        # s - is the pole where the biggest block is located
         if x in t[0]:
             s = 0
         elif x in t[1]:
@@ -206,39 +161,15 @@ init python:
         else:
             s = 2
             
-        ####
-        # if the biggest block is already on finish pole
-        # and this block's number is 1
-        # then we got nothing else to do
         if (s == f) and (x == 1):
             pass
         
-        ####
-        # if the biggest block is already on finish pole
-        # and this block's number is not 1
-        # then we should move the tower of (x-1) blocks upon it
         elif (s == f) and (x != 1):
             hanoi_func_2(t, x-1, f)
             
-        ####
-        # if the biggest block is not in finish pole
-        # and this block's number is 1
-        # then move it to finish pole
         elif (s != f) and (x == 1):
             res_2.append((s, f))
             
-        ####
-        # otherwise we need to create a list of moves
-        # [to move (x-1) tower from free pole to finish one,
-        #  to move x-block to the finish pole,
-        #  to set (x-1) tower on the free pole from blocks on different poles]
-        # then we should make the moves from this list
-        # from last one to first.
-        #
-        # So to move (x-1) tower to finish pole
-        # we should use make_path_1 function,
-        # and to set all the blocks to (x-1) tower on the free pole
-        # we should use make_path_2 function
         else:
             ####
             # ss is the free pole that neither start nor finish one
@@ -261,15 +192,6 @@ init python:
     
     
     def make_path_1(x, s, f):
-        '''
-        Use this function to get result of "hanoi_func_1"
-        x - number of blocks in tower
-        s - number of pole where tower is located
-        f - number of pole where tower should be moved to
-        
-        This function is used when all the blocks are in one tower.
-        '''
-        
         global res_1, res_2
         res_1 = []
         hanoi_func_1(x, s, f)
@@ -282,25 +204,6 @@ init python:
 
         
     def hanoi_func_1(x, s, f):
-        '''
-        x - number of blocks in tower
-        s - number of pole where tower is located
-        f - number of pole where tower should be moved to
-        
-        The function returns the list of tuples that are
-        (start_pole, finish_pole) that describes moves that
-        should be made from last to first to win the game.
-        
-        So when function will return that list, one should pop
-        tuples out of it one after another and move blocks
-        from "start_pole" position to "finish_pole" position.
-        
-        In general, to move n-block tower from start pole to finish pole,
-        one must move (n-1)-block tower to the pole
-        that is neither start nor finish one,
-        then move the n-block to the finish pole
-        and move (n-1)-block tower to the finish pole
-        '''
         
         global res_1
         if x == 1:
@@ -319,19 +222,11 @@ init python:
         return res_1
 
 label hanoi_game(blocks_number): # sets the default number of blocks
-    
-    ####
-    # a list of colors for maximum number of blocks
-    # this can be colors or images,
-    # if you need all the blocks to be the same color
-    # just add this color to the list several times
+
     $ block_colors = ["#c00", "#0c0", "#00c", "#cc0", "#c0c", "#0cc", "#930", "#ccc"]
 
     $ block_colors = [texture1, texture2, texture3, texture4, texture1, texture2, texture3, texture4]
     
-    ####
-    # number of blocks in tower shouldn't be greater
-    # then the number of colors in block_colors list
     if blocks_number > len(block_colors):
         $ blocks_number = len(block_colors)
         
@@ -416,11 +311,6 @@ label hanoi_game(blocks_number): # sets the default number of blocks
                 ####
                 # we need to make this list only once
                 $ create_movements_list = False
-                
-                ####
-                # make_path_2 function needs "t" - that is list of 3 list
-                # that contains only blocks numbers
-                # so create it from main game variable "towers"
                 $ t = []
                 python:
                     for i in towers:
