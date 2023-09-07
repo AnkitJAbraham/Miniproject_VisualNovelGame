@@ -19,7 +19,7 @@ Official repository for our group miniproject submission - Interactive Visual No
   The project was to develop a visually immersive and engaging narrative-based game using Ren'Py, a visual novel engine, adapting the story of the acclaimed Shakespearen play "The Merchant of Venice".
 The premise of the project is to implement interactive storytelling and have branching storylines based on user choices, with overarching consequences throughout.
 The project also aims to convey important moral messages within the game, focusing on and moral values, provide guidance and offer insights into the consequences of one's actions, encouraging players to make thoughtful choices throughout the game, while also maintaining the interactive sentiment through puzzles, challenges, riddles, etc.
-<img src="./novelsite/images/titleimg.png" alt="Miniproject game image">
+<img src="[./novelsite/images/titleimg.png](https://github.com/AnkitJAbraham/Miniproject_VisualNovelGame/blob/main/novelsite/images/titleimg.png)" alt="Miniproject game image">
 <h2>Video/Demo</h2>
 <a href="https://www.youtube.com/watch?v=iZOCLmFYsNU">See our project game demo here !</a>
 
