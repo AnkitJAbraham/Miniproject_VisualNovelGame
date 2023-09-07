@@ -1,4 +1,4 @@
-![image](https://github.com/AnkitJAbraham/Miniproject_VisualNovelGame/assets/114466432/3e650789-289c-4969-9e9c-23b4b98f79ef)<h1>Miniproject Repository - Visual Novel Based Game</h1>
+# Miniproject Repository - Visual Novel Based Game
 Official repository for our group miniproject submission - Interactive Visual Novel Based Game
 
 <h2>The Merchant Of Venice</h2>
