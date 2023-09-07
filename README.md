@@ -11,6 +11,6 @@ Official repository for our group miniproject submission - Interactive Visual No
 </ul>
 <h2>Project Websites</h2>
 <ul>
-  <li><h4>Showcase Website - <a href="https://visualnovelgame.netlify.app/">https://visualnovelgame.netlify.app/</a></h4></li>
+  <li><h4>Showcase Website - <a href="https://visualnovelgame.vercel.app/">https://visualnovelgame.vercel.app/</a></h4></li>
   <li><h4>Game Hosting Directory Website - <a href="https://spacecraft04.itch.io/the-merchant-of-venice">https://spacecraft04.itch.io/the-merchant-of-venice</a></h4></li>
 </ul>
