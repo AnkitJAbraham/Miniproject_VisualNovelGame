@@ -50,7 +50,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="w-full flex flex-col justify-content items-center bg-gradient-to-r from-[#000] to-[#24243e] overflow-hidden">
+      <main className="w-full flex flex-col justify-content items-center bg-gradient-to-r from-[#000] to-[#24243e] overflow-hidden text-white">
         <Header />
         <TitleImage />
         <Introduction />
