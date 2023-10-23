@@ -3,7 +3,7 @@ import React from 'react';
 export default function Features() {
 	return (
 		<div className="container mx-auto py-8 px-8 md:ml-40">
-			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white -mr-20">
+			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white -mr-20">
 				<h2>Features</h2>
 			</div>
 			<div className="text-xl lg:ml-20">

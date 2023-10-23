@@ -35,7 +35,7 @@ const shuffleArray = (array) => {
   
 	return (
 		<div className="container mx-auto py-8 px-8 md:ml-40">
-			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl dark:text-white">
+			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl text-white">
 				<h2>Some Gameplay Moments</h2>
 			</div>
 			<div className="w-full max-w-screen-lg md:ml-44">
