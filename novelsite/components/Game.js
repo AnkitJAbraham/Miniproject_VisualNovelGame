@@ -9,8 +9,8 @@ export default function Game() {
 			<div className="text-xl -mb-10 md:ml-20">
 			Try our game, rendered in the browser without any additional downloads !
 			</div>
-			<div className="flex items-center justify-center md:pr-72 pr-9 pl-[34px] md:pl-20">
-			<div className="mt-0 rounded-3xl pt-20 w-full max-w-6xl mx-auto -ml-8">
+			<div className="flex items-center justify-center md:pr-60 pl-1">
+			<div className="mt-0 rounded-3xl pt-20 w-full max-w-6xl md:mx-auto">
 				<iframe
 					src="https://storage.googleapis.com/miniproject_visualnovel/merchant_of_venice-7.0-web/index.html"
 					title="Merchant Of Venice"
@@ -23,6 +23,5 @@ export default function Game() {
 		</div>
 	);
 }
-
 
 
