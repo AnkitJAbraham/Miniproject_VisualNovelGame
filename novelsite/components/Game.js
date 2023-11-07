@@ -9,10 +9,10 @@ export default function Game() {
 			<div className="text-xl -mb-10 md:ml-20">
 			Try our game, rendered in the browser without any additional downloads !
 			</div>
-			<div className="flex items-center justify-center md:pr-60">
-			<div className="mt-0 rounded-3xl pt-20 md:w-full max-w-6xl md:mx-auto">
+			<div className="flex items-center justify-center md:pr-64">
+			<div className="mt-0 rounded-3xl pt-20 md:w-full max-w-6xl mx-auto">
 				<iframe
-					src="https://storage.googleapis.com/miniproject_visualnovel/merchant_of_venice-7.0-web/index.html"
+					src="https://visualnovelgameweb.s3.ap-south-1.amazonaws.com/merchant_of_venice-7.0-web/index.html"
 					title="Merchant Of Venice"
 					width="1300"
 					height="800"

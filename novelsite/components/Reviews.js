@@ -58,7 +58,7 @@ export default function Reviews() {
       <div className="mb-10 text-4xl pb-8 w-full font-extrabold leading-none tracking-tight md:text-5xl text-white -mr-20">
         <h2>What Others Say About This!</h2>
       </div>
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full max-w-4xl mx-auto md:ml-60">
         <Slider {...settings}>
           {shuffledTestimonials.map((testimonial, index) => (
             <div key={index} className="p-4">

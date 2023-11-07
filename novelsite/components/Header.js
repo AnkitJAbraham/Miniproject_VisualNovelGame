@@ -32,7 +32,7 @@ export default function Header() {
 				</button>
 			</span>
 			{/* horizontal line apparently */}
-			<hr class="h-px my-8 bg-white border-0" />
+			<hr className="h-px my-8 bg-white border-0" />
 		</div>
 	);
 }

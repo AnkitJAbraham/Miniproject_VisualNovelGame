@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function TitleImage() {
 	return (
-		<div className="p-2 md:p-0">
+		<div className="p-2 md:p-0 md:mr-6">
 			<Image
 				src="/titleimg.webp"
 				width={1100}
