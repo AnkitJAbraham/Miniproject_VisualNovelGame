@@ -4,7 +4,7 @@ export default function Header() {
 	return (
 		<div className="pt-16 flex justify-between">
 			<div className="sm:ml-28 px-60 ml-16">
-				<h1 className="mb-10 text-4xl whitespace-nowrap font-extrabold leading-none tracking-tight bg-gradient-to-r from-[#feac5e] via-[#c779d0] to-[#4bc0c8] inline-block text-transparent bg-clip-text md:text-5xl lg:text-6xl ml-44 -mr-20">
+				<h1 className="mb-10 text-4xl whitespace-nowrap font-extrabold leading-none tracking-tight bg-gradient-to-r from-[#feac5e] via-[#c779d0] to-[#4bc0c8] inline-block text-transparent bg-clip-text md:text-5xl lg:text-6xl md:ml-44 ml-44 md:-mr-20 -mr-14">
 					Merchant Of Venice
 				</h1>
 				{/* <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
