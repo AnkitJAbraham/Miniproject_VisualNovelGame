@@ -9,7 +9,7 @@ export default function Download() {
 			<div className="text-xl md:ml-20">
 				Download our game here for offline play at your leisure.
 				<br/>
-				<span className="text-base md:ml-12">
+				<span className="text-base md:ml-12 italic">
 					(Disclaimer: This is not a commercial game, and so it is not
 					guaranteed to be completely free of bugs.)
 				</span>

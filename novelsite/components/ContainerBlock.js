@@ -56,9 +56,14 @@ export default function ContainerBlock({children, ...customMeta}) {
 			</Head>
 			<main className="w-full flex flex-col justify-content items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#97D8C4] background-animate overflow-hidden text-white">
 				<Header />
+				<div className="h-0.5 w-4/5 bg-white dark:bg-gray-700 mb-4"></div>
 				<TitleImage />
+				<div className="md:mr-40">
 				<Introduction />
+				<div className="h-0.5 w-11/12 bg-white dark:bg-gray-700 mb-4 ml-48"></div>
 				<Features />
+				<div className="h-0.5 w-11/12 bg-white dark:bg-gray-700 mb-4 ml-48"></div>
+				</div>
 				<Screenshots />
 				<Reviews />
 				<Game />

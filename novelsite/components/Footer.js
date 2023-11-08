@@ -24,7 +24,7 @@ export default function Footer() {
 			</div>
 
 			<div className="flex flex-wrap space-y-4 md:space-y-0 md:flex-row justify-evenly md:items-center mt-8">
-				<div className="text-2xl -mt-1 pl-0 md:pl-10">Developed by - </div>
+				<div className="text-2xl -mt-1 pl-0 md:pl-10 italic">Developed by - </div>
 				<ul className="flex justify-between">
 					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300">
 						{' '}
