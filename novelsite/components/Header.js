@@ -11,7 +11,7 @@ export default function Header() {
 					The Most Awaited Game of 2023
 				</p> */}
 			</div>
-			<div className="mt-1 ml-20 pl-16 invisible md:visible">
+			<div className="mt-2 ml-20 pl-16 invisible md:visible">
 				<button
 					type="button"
 					className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-2xl inline-block px-5 py-2.5"
