@@ -18,16 +18,17 @@ export default function Header() {
 					<span className="italic">Ace Attorney</span>&quot;, a Japanese visual
 					novel based game.{' '}
 				</div>
-				<p>
+				<div>
 					Interactive storytelling is a form of digital entertainment in which
-					the storyline is not predetermined. <br /><br />
-					<p>
+					the storyline is not predetermined. <br />
+					<br />
+					<div>
 						The author creates the setting, characters, and situation which the
 						narrative must address, but the user (also reader or player)
 						experiences <br /> a unique story based on their interactions and
 						choices.
-					</p>
-				</p>
+					</div>
+				</div>
 			</div>
 			<div className="font-bold text-xl lg:ml-40 mt-8 shadow-2xl">
 				Therefore, our goal was to produce a playable game which combines the
