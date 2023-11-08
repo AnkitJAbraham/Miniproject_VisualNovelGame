@@ -9,7 +9,7 @@ export default function Footer() {
 				Check out our Github here:
 				<a
 					href="https://www.github.com/AnkitJAbraham/Miniproject_VisualNovelGame"
-					className="pl-8 pt-1"
+					className="pl-8 pt-1 md:mr-0 mr-9"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

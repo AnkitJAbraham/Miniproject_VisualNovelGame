@@ -6,7 +6,7 @@ export default function Features() {
 			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white md:text-right mr-32">
 				<h2>Features</h2>
 			</div>
-			<div className="text-xl lg:ml-20">
+			<div className="text-l lg:ml-20">
 				<ol className="list-disc">
 					<li>
 						Implement branching storylines with weighted choices, ensuring

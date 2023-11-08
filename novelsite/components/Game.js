@@ -6,7 +6,7 @@ export default function Game() {
 			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white -mr-20">
 				<h2>Demo</h2>
 			</div>
-			<div className="text-xl -mb-10 md:ml-20">
+			<div className="text-l -mb-10 md:ml-20">
 			Try our game, rendered in the browser without any additional downloads !
 			</div>
 			<div className="flex items-center justify-center md:pr-64">
@@ -16,7 +16,7 @@ export default function Game() {
 					title="Merchant Of Venice"
 					width="1300"
 					height="800"
-					className="aspect-auto rounded-3xl h-64 md:h-[800px] md:w-[1300px] w-80"
+					className="aspect-auto rounded-3xl h-64 md:h-[800px] md:w-[1300px] w-screen"
 				></iframe>
 			</div>
 			</div>

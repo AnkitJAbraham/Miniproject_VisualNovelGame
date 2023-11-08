@@ -6,7 +6,7 @@ export default function Download() {
 			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white -mr-20">
 				<h2>Downloads</h2>
 			</div>
-			<div className="text-xl md:ml-20">
+			<div className="text-l md:ml-20">
 				Download our game here for offline play at your leisure.
 				<br/>
 				<span className="text-base md:ml-12 italic">

@@ -6,7 +6,7 @@ export default function Header() {
 			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white -mr-20">
 				<h2>Introduction</h2>
 			</div>
-			<div className="text-xl lg:ml-20 max-w-full">
+			<div className="text-l lg:ml-20 max-w-full">
 				<div>
 					Visual narrative games are video games that focus on storytelling
 					through visuals, using cutscenes, dialogue, and character interactions
