@@ -34,26 +34,26 @@ const shuffleArray = (array) => {
 	}, []);
   
 	return (
-		<div className="container mx-auto py-8 px-8 md:ml-40">
-			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl text-white">
-				<h2>Some Gameplay Moments</h2>
+		<>
+			<div className="mb-8 md:text-left text-center text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+				Some Gameplay Moments
 			</div>
-			<div className="w-full max-w-screen-lg md:ml-44">
+			<div className="w-full max-w-screen-lg container mx-auto">
 				<Slider {...settings}>
 					{shuffledImages.map((image, index) => (
-						<div key={index} className="px-4">
+						<div key={index} className="px-6">
 							<Image
 								src={image}
 								alt={`Image ${index}`}
-								width={1400}
-								height={900}
-								className="mt-0 rounded-3xl"
+								width={950}
+								height={800}
+								className=" mt-0 rounded-3xl"
 							/>
 						</div>
 					))}
 				</Slider>
 			</div>
-		</div>
+		</>
 	);
 };
 

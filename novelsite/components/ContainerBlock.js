@@ -42,6 +42,8 @@ export default function ContainerBlock({children, ...customMeta}) {
 					property="og:site_name"
 					content="Merchant Of Venice: Miniproject"
 				/>
+				<meta charSet="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta property="og:description" content={meta.description} />
 				<meta property="og:title" content={meta.title} />
 				<meta property="og:image" content={meta.image} />
@@ -54,22 +56,25 @@ export default function ContainerBlock({children, ...customMeta}) {
 					<meta property="article:published_time" content={meta.date} />
 				)}
 			</Head>
-			<main className="w-full flex flex-col justify-content items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#97D8C4] background-animate overflow-hidden text-white">
-				<Header />
-				<div className="h-0.5 md:w-4/5 w-11/12 bg-white dark:bg-gray-700 mb-4"></div>
-				<TitleImage />
-				<div className="md:mr-40">
-				<Introduction />
-				<div className="h-0.5 w-11/12 bg-white dark:bg-gray-700 mb-4 md:ml-48 ml-4"></div>
-				<Features />
-				<div className="h-0.5 w-11/12 bg-white dark:bg-gray-700 mb-4 md:ml-48 ml-4"></div>
+			{/* overflow-y-scroll h-screen snap-y snap-mandatory */}
+			<main className="flex flex-col gap-20 md:gap-8 items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#0B1D51] background-animate text-white ">
+				<div className="w-full gap-8 md:gap-0 flex flex-col flex-1 min-h-screen justify-around items-center snap-start">
+					<Header />
+					<TitleImage />
 				</div>
-				<Screenshots />
-				<Reviews />
+				<div className="w-full gap-8 md:gap-0 md:w-2/3 flex flex-col flex-1 min-h-screen justify-evenly snap-start">
+					<Introduction />
+					<Features />
+				</div>
+				<div className="w-full gap-8 md:gap-0 md:w-2/3 flex flex-col flex-1 min-h-screen justify-evenly snap-start">
+					<Screenshots />
+					<Reviews />
+				</div>
 				<Game />
-				<Download />
-				{/* <div>{children}</div> */}
-				<Footer />
+				<div className="w-full gap-8 md:gap-0 md:w-2/3 flex flex-col flex-1 min-h-screen justify-evenly snap-start">
+					<Download />
+					<Footer />
+				</div>
 			</main>
 		</div>
 	);

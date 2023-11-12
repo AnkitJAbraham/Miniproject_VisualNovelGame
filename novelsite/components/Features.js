@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Features() {
 	return (
-		<div className="container mx-auto py-8 px-8 md:ml-40">
-			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white md:text-right mr-32">
-				<h2>Features</h2>
+		<>
+			<div className="text-3xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+				Features
 			</div>
-			<div className="text-l lg:ml-20">
+			<div className="text-l py-6 px-10">
 				<ol className="list-disc">
 					<li>
 						Implement branching storylines with weighted choices, ensuring
@@ -25,6 +25,6 @@ export default function Features() {
 					</li>
 				</ol>
 			</div>
-		</div>
+		</>
 	);
 }

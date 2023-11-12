@@ -54,17 +54,17 @@ export default function Reviews() {
   }, []);
 
   return (
-    <div className="container mx-auto py-6 md:py-8 px-8 md:ml-40">
-      <div className="mb-10 text-4xl pb-8 w-full font-extrabold leading-none tracking-tight md:text-5xl text-white -mr-20">
-        <h2>What Others Say About This!</h2>
+    <>
+      <div className="text-3xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+        What Others Say About This!
       </div>
-      <div className="w-full max-w-4xl mx-auto md:ml-60">
+      <div className="w-full mt-6 max-w-4xl container mx-auto shadow-md bg-[#000] rounded-lg">
         <Slider {...settings}>
           {shuffledTestimonials.map((testimonial, index) => (
             <div key={index} className="p-4">
-              <blockquote className="relative p-6 rounded-lg shadow-md">
-                <p className="text-2xl mb-4 max-w-prose">{testimonial.text}</p>
-                <footer className="text-gray-500 text-right">
+              <blockquote className="relative p-4 rounded-lg">
+                <p className="text-xl mb-4 max-w-prose">{testimonial.text}</p>
+                <footer className="text-right text-[#faebd7]">
                   - {testimonial.author}
                 </footer>
               </blockquote>
@@ -72,6 +72,6 @@ export default function Reviews() {
           ))}
         </Slider>
       </div>
-    </div>
+    </>
   );
 }

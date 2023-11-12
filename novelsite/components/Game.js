@@ -2,26 +2,22 @@ import React from 'react';
 
 export default function Game() {
 	return (
-		<div className="container mx-auto pt-8 pb-8 px-8 md:ml-40">
-			<div className="mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-5xl text-white -mr-20">
-				<h2>Demo</h2>
+		<div className="w-2/3 flex flex-col flex-1 md:min-h-screen justify-start gap-10 snap-start">
+			<div className="text-3xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+				Demo
 			</div>
-			<div className="text-l -mb-10 md:ml-20">
-			Try our game, rendered in the browser without any additional downloads !
+			<div className="text-xl md:text-left text-center md:text-2xl pt-2">
+				Try our game, rendered in the browser without any additional downloads !
 			</div>
-			<div className="flex items-center justify-center md:pr-64">
-			<div className="mt-0 rounded-3xl pt-20 md:w-full max-w-6xl mx-auto">
+			<div className="flex flex-col items-center rounded-3xl pt-10 w-full mx-auto">
 				<iframe
 					src="https://visualnovelgameweb.s3.ap-south-1.amazonaws.com/merchant_of_venice-7.0-web/index.html"
 					title="Merchant Of Venice"
 					width="1300"
-					height="800"
-					className="aspect-auto rounded-3xl h-64 md:h-[800px] md:w-[1300px] w-screen"
+					height="900"
+					className="rounded-3xl w-[40vh] h-[30vh] md:h-[600px] md:w-[1100px]"
 				></iframe>
-			</div>
 			</div>
 		</div>
 	);
 }
-
-
