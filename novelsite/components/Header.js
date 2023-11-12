@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
 	return (
-		<div className="flex flex-col w-full md:mt-0 md:pt-3 -mt-40">
+		<div className="flex flex-col w-full md:mt-0 md:pt-3 -mt-48">
 			<div className="flex w-full md:flex-row flex-col justify-between">
 				<div className="md:invisible basis-1/3"></div>
 				<div className="basis-1/3 text-center text-4xl whitespace-nowrap font-extrabold leading-none tracking-tight bg-gradient-to-r from-[#F1C46A] via-[#c779d0] to-[#00F5D4] inline-block text-transparent bg-clip-text md:text-5xl md:pt-2">
