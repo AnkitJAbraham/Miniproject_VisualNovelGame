@@ -55,10 +55,10 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="text-3xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+      <div className="text-3xl mx-2 md:mx-0 md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
         What Others Say About This!
       </div>
-      <div className="w-full mt-6 max-w-4xl container mx-auto shadow-md bg-[#000] rounded-lg">
+      <div className="w-full md:mt-6 max-w-4xl container mx-auto shadow-md bg-[#000] rounded-lg">
         <Slider {...settings}>
           {shuffledTestimonials.map((testimonial, index) => (
             <div key={index} className="p-4">

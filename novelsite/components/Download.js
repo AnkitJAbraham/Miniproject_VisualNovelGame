@@ -9,19 +9,19 @@ export default function Download() {
 			<div className="text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7] md:text-left text-center">
 				Downloads
 			</div>
-			<div className="text-2xl md:text-left text-center">
+			<div className="text-2xl px-10 md:text-left text-center">
 				Download our game here for offline play at your leisure.
 				<br />
 			</div>
-			<div className="text-base italic md:text-left text-center">
+			<div className="text-base px-10 italic md:text-left text-center">
 				(Disclaimer: This is not a commercial game, and so it is not guaranteed
 				to be completely free of bugs.)
 			</div>
-			<div className="text-xl md:text-2xl md:text-left text-center">
+			<div className="text-xl px-10 md:text-2xl md:text-left text-center">
 				Enjoy the finished product below, works on any Windows and Mac pc with
 				absolutely no restrictions!
 			</div>
-			<div className="text-base italic md:text-left text-center">Latest Version - Version 1.2.1</div>
+			<div className="text-base px-10 italic md:text-left text-center">Latest Version - Version 1.2.1</div>
 			<div className="flex justify-center">
 				<button
 					type="button"

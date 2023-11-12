@@ -35,7 +35,7 @@ const shuffleArray = (array) => {
   
 	return (
 		<>
-			<div className="mb-8 md:text-left text-center text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
+			<div className="md:mb-8 md:text-left text-center text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
 				Some Gameplay Moments
 			</div>
 			<div className="w-full max-w-screen-lg container mx-auto">
@@ -47,7 +47,7 @@ const shuffleArray = (array) => {
 								alt={`Image ${index}`}
 								width={950}
 								height={800}
-								className=" mt-0 rounded-3xl"
+								className="mt-0 rounded-3xl"
 							/>
 						</div>
 					))}
