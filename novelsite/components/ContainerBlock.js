@@ -57,7 +57,7 @@ export default function ContainerBlock({children, ...customMeta}) {
 				)}
 			</Head>
 			{/* overflow-y-scroll h-screen snap-y snap-mandatory md:overflow-y-scroll md:h-screen md:snap-y md:snap-mandatory */}
-			<main className="flex flex-col gap-20 md:gap-8 items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#051323] background-animate text-white overflow-x-hidden overflow-y-scroll h-screen snap-y snap-mandatory md:overflow-y-scroll md:h-screen md:snap-y md:snap-mandatory">
+			<main className="flex flex-col gap-20 md:gap-8 items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#051323] background-animate text-white overflow-x-hidden">
 				<div className="w-full gap-8 md:gap-0 flex flex-col flex-1 min-h-screen justify-evenly items-center snap-start">
 					<Header />
 					<TitleImage />
