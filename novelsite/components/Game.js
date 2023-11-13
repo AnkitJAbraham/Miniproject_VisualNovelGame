@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Game() {
 	return (
-		<div className="md:w-2/3 flex flex-col flex-1 md:min-h-screen justify-start gap-10 snap-start">
+		<div className="md:w-2/3 flex flex-col flex-1 md:min-h-screen justify-start gap-10">
 			<div className="text-3xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7]">
 				Demo
 			</div>

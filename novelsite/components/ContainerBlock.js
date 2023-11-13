@@ -56,7 +56,7 @@ export default function ContainerBlock({children, ...customMeta}) {
 					<meta property="article:published_time" content={meta.date} />
 				)}
 			</Head>
-			{/* overflow-y-scroll h-screen snap-y snap-mandatory md:overflow-y-scroll md:h-screen md:snap-y md:snap-mandatory */}
+			{/* md:overflow-y-scroll md:h-screen md:snap-y md:snap-mandatory */}
 			<main className="flex flex-col gap-20 md:gap-8 items-center bg-gradient-to-r from-[#000] via-[#24243e] to-[#051323] background-animate text-white overflow-x-hidden">
 				<div className="w-full gap-8 md:gap-0 flex flex-col flex-1 min-h-screen justify-evenly items-center snap-start">
 					<Header />
@@ -70,7 +70,9 @@ export default function ContainerBlock({children, ...customMeta}) {
 					<Screenshots />
 					<Reviews />
 				</div>
-				<Game />
+				<div className="w-full gap-8 md:gap-0 flex flex-col flex-1 min-h-screen justify-evenly items-center snap-start">
+					<Game />
+				</div>
 				<div className="w-full gap-8 md:gap-0 md:w-2/3 flex flex-col flex-1 min-h-screen justify-evenly items-center snap-start">
 					<Download />
 					<Footer />
