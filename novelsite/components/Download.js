@@ -3,7 +3,7 @@ import React from 'react';
 export default function Download() {
 	return (
 		<div
-			className="w-full flex flex-col flex-1 min-h-[65vh] md:min-h-[90vh] justify-evenly"
+			className="w-full flex flex-col flex-1 min-h-[65vh] md:min-h-[90vh] pt-4 justify-evenly"
 			id="download"
 		>
 			<div className="text-3xl font-extrabold leading-none tracking-tight md:text-4xl text-[#faebd7] md:text-left text-center">
@@ -25,7 +25,7 @@ export default function Download() {
 			<div className="flex justify-center">
 				<button
 					type="button"
-					className=" mx-auto text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-2xl inline-block px-5 py-2.5"
+					className="transition-all duration-300 ease-out hover:animate-step-end hover:scale-[1.02] mx-auto text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-2xl inline-block px-5 py-2.5"
 				>
 					<a
 						href="https://storage.googleapis.com/miniproject_visualnovel/merchant_of_venice-7.0-win.zip"

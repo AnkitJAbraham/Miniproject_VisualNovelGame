@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function TitleImage() {
 	return (
-		<div className="flex flex-col justify-around space-y-6">
-			<div className="w-full overflow-hidden flex justify-center px-2 md:mt-0 -mt-32">
+		<div className="flex flex-col md:space-y-6 space-y-24">
+			<div className="w-full overflow-hidden flex justify-center px-2 ">
 				<Image
 					src="/titleimg.webp"
 					width={1000}

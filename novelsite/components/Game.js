@@ -9,13 +9,13 @@ export default function Game() {
 			<div className="text-xl text-left md:text-2xl pt-2 px-10">
 				Try our game, rendered in the browser without any additional downloads !
 			</div>
-			<div className="flex flex-col items-center rounded-3xl pt-10 w-full mx-auto">
+			<div className="flex flex-col items-center rounded-3xl pt-6 w-full h-full mx-auto md:my-0 my-10 px-2">
 				<iframe
 					src="https://visualnovelgameweb.s3.ap-south-1.amazonaws.com/merchant_of_venice-7.0-web/index.html"
 					title="Merchant Of Venice"
-					width="1300"
-					height="900"
-					className="rounded-3xl w-[40vh] h-[30vh] md:h-[600px] md:w-[1100px]"
+					width="1920"
+					height="1080"
+					className="rounded-3xl md:h-[75vh] h-[40vh] w-full"
 				></iframe>
 			</div>
 		</div>

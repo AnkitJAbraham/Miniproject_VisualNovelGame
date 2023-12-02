@@ -2,16 +2,16 @@ import React from 'react';
 
 export default function Header() {
 	return (
-		<div className="flex flex-col w-full md:mt-0 md:pt-3 -mt-48">
+		<div className="flex flex-col w-full md:mt-0 md:pt-3 pt-0 max-[400px]:-mt-10 -mt-24">
 			<div className="flex w-full md:flex-row flex-col justify-between">
-				<div className="md:invisible basis-1/3"></div>
-				<div className="basis-1/3 font-garamond text-center text-5xl whitespace-nowrap italic font-black leading-none tracking-tight bg-gradient-to-r from-[#F1C46A] via-[#c779d0] to-[#00F5D4] inline-block text-transparent bg-clip-text md:text-6xl md:pt-2">
+				<div className="md:invisible hidden md:block basis-1/3"></div>
+				<div className="basis-1/3  text-center text-4xl whitespace-nowrap italic font-black leading-none tracking-tight bg-gradient-to-r from-[#F1C46A] via-[#c779d0] to-[#00F5D4] inline-block text-transparent bg-clip-text md:text-6xl md:pt-2">
 					Merchant Of Venice
 				</div>
-				<div className="hidden md:block basis-1/3 text-right  md:pt-2 pr-12">
+				<div className="hidden md:block basis-1/3 text-right md:pt-2 pr-12">
 					<button
 						type="button"
-						className="text-white whitespace-nowrap bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-2xl px-5 py-2.5"
+						className="transition-all duration-300 ease-out hover:animate-step-end hover:scale-[1.02] text-white whitespace-nowrap bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-2xl px-5 py-2.5"
 					>
 						<a
 							href="#download"

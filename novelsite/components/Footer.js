@@ -25,41 +25,41 @@ export default function Footer() {
 
 			<div className="flex flex-wrap space-y-4 md:space-y-0 md:flex-row justify-evenly md:items-center mt-8 w-2/3">
 				<div className="text-2xl -mt-1 pl-0 md:pl-10 italic [text-shadow:0_10px_20px_#E11447]">Developed by - </div>
-				<ul className="flex justify-between">
-					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300">
+				<ul className="flex justify-between md:gap-0 gap-6">
+					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300 text-center">
 						{' '}
 						<a
-							className="hover:bg-red-500 rounded-md px-2 md:px-10 py-1 hover:text-gray-50"
+							className="hover:bg-fuchsia-950 rounded-md px-2 md:px-10 py-1 hover:text-gray-50 hover:font-semibold"
 							href="https://www.ankitjohn.me"
 							target="_blank"
 						>
 							Ankit John Abraham
 						</a>
 					</li>
-					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300">
+					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300 text-center">
 						{' '}
 						<a
-							className="hover:bg-green-500 rounded-md px-2 md:px-10 py-1 hover:text-gray-50"
+							className="hover:bg-[#000fff] rounded-md px-2 md:px-10 py-1 hover:text-gray-50 hover:font-semibold"
 							href="https://in.linkedin.com/in/alwin-shibu-34a165210"
 							target="_blank"
 						>
 							Alwin Shibu
 						</a>
 					</li>
-					<li className="transform hover:scale-110 hover:rotate-3 transition duration-300">
+					<li className="transform hover:scale-110 hover:rotate-3 transition duration-300 text-center">
 						{' '}
 						<a
-							className="hover:bg-blue-500 rounded-md px-2 md:px-10 py-1 hover:text-gray-50"
+							className="hover:bg-teal-400 rounded-md px-2 md:px-10 py-1 hover:text-gray-50 hover:font-semibold"
 							href="https://in.linkedin.com/in/christopher-jacob-b696b1255"
 							target="_blank"
 						>
 							Christopher Jacob
 						</a>
 					</li>
-					<li className="transform hover:scale-110 hover:rotate-3 transition duration-300">
+					<li className="transform hover:scale-110 hover:rotate-3 transition duration-300 text-center">
 						{' '}
 						<a
-							className="hover:bg-yellow-500 rounded-md px-2 md:px-10 py-1 hover:text-gray-50"
+							className="hover:bg-orange-300 rounded-md px-2 md:px-10 py-1 hover:text-black hover:font-semibold"
 							href="https://www.github.com/AshwinSaji10"
 							target="_blank"
 						>
