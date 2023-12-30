@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Footer() {
 	return (
-		<div className="flex flex-col items-center w-screen pb-8 px-4">
-			<div className="h-0.5 w-screen bg-white"></div>
+		<div className="flex flex-col items-center bg-gradient-to-r from-gray-700 via-gray-900 to-black pb-8">
+			<div className="h-0.5 w-full bg-white"></div>
 			{/* this is for the horizontal line decoration */}
 			<div className="flex flex-wrap justify-center pt-4 pl-3 md:pl-0 md:items-center text-2xl">
 				Check out our Github here:

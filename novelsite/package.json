@@ -1,5 +1,5 @@
 {
-  "name": "visualnovelgame",
+  "name": "novelsite2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.5.4",
-    "next-themes": "^0.2.1",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10",
+    "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4",
+    "eslint-config-next": "14.0.4",
     "postcss": "^8",
-    "tailwindcss": "^3"
+    "tailwindcss": "^3.3.0"
   }
 }
