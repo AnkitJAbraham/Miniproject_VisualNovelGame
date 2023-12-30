@@ -50,7 +50,7 @@ export default function Home() {
 					</div>
 					<div className="flex flex-col basis-1/3 gap-10 py-5">
 						<div>Check out the walkthrough video</div>
-						<div>
+						<div className='select-none'>
 							<a href="https://www.youtube.com/watch?v=iZOCLmFYsNU">
 								<Image
 									src={videoimage}

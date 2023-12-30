@@ -78,7 +78,7 @@ export default function Reviews() {
 					))}
 				</Slider>
 			</div>
-			<div className="mx-auto">
+			<div className="mx-auto select-none">
 				<Image
 					src={gotyimage}					
 					alt="Logo to show fake GOTY"
