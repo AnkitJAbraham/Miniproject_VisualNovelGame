@@ -3,31 +3,32 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
+import gotyimage from "../../public/images/pcgamerlogo.png";
 
 const testimonials = [
 	{
-		author: 'Christopher Jacob (Random White Guy)',
+		author: 'Christopher Jacob (Not-So-Random White Guy)',
 		text: "Hands down the best game I've ever played !",
 	},
 	{
-		author: 'Ashwin Saji (Silent But Deadly)',
+		author: 'Ashwin Saji (Still Silent But Deadly)',
 		text: 'Extremely fun and intriguing game, made me a lifelong fan. Five stars !!',
 	},
 	{
-		author: 'Alwin Shibu (Don of Kochi)',
+		author: 'Alwin Shibu (Rider/Don Of Kochi)',
 		text: 'This is THE game of the year, must play if you want to live !!',
 	},
 	{
-		author: 'Ajith Bobby (Local Banana Plant)',
+		author: 'Ajith Bobby (International Banana Plant)',
 		text: 'I like only two things now, Machine Learning, and this game !',
 	},
 	{
-		author: 'Ankit John (Thicc And Handsome)',
+		author: 'Ankit John (More Thicc And Handsome Than Ever)',
 		text: 'Whoever created this game are the best programmers ever !!',
 	},
 	{
 		author: 'Adithya M (Long-haired Hardcore Gamer)',
-		text: "Only game that I bought legitimately, such that I'm a huge fan now",
+		text: "Only game that I found tough, ever, such that I'm a huge fan now! ",
 	},
 ];
 
@@ -79,11 +80,9 @@ export default function Reviews() {
 			</div>
 			<div className="mx-auto">
 				<Image
-					src="/images/pcgamerlogo.png"
-					width={400}
-					height={400}
+					src={gotyimage}					
 					alt="Logo to show fake GOTY"
-					className="h-full w-full"
+					className="md:h-[40%] md:w-[40%] mx-auto"
 				/>
 			</div>
             <div className='md:text-[0.5rem] text-[0.25rem] text-center'>

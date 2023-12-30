@@ -1,9 +1,9 @@
 import {Inter} from 'next/font/google';
-import { Dancing_Script } from 'next/font/google';
 import ContainerBlock from '../components/ContainerBlock';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
+import videoimage from '../../public/images/titleimg.webp';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -12,8 +12,7 @@ export default function Home() {
 		<>
 			<ContainerBlock />
 			<div className="md:h-[92vh] flex flex-col items-center justify-center overflow-hidden md:bg-[url('/images/largebg.webp')] bg-[url('/images/mobilebg.webp')] bg-cover bg-no-repeat bg-fixed">
-			{/* bg-[url('/images/mobile_test.avif')] */}
-				<div className="text-black text-center md:text-6xl text-3xl font-bold mt-4 h-1/2">
+				<div className="text-black text-center md:text-6xl text-3xl font-bold mt-4 h-1/2 min-h-">
 					<div className="mb-8">
 						<p className="fade-in-text animated-delay-1">Presenting</p>
 						<p className="fade-in-text animated-delay-2">
@@ -54,9 +53,7 @@ export default function Home() {
 						<div>
 							<a href="https://www.youtube.com/watch?v=iZOCLmFYsNU">
 								<Image
-									src="/images/titleimg.webp"
-									width={400}
-									height={400}
+									src={videoimage}
 									alt="Game Video"
 									className="transition-transform duration-300 ease-in-out hover:scale-105 mx-auto"
 								></Image>
