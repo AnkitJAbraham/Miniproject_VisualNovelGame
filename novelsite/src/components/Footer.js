@@ -5,8 +5,8 @@ export default function Footer() {
 		<div className="flex flex-col items-center bg-gradient-to-r from-gray-700 via-gray-900 to-black pb-8 text-white">
 			<div className="h-0.5 w-full bg-white"></div>
 			{/* this is for the horizontal line decoration */}
-			<div className="flex flex-wrap justify-center pt-4 pl-3 md:pl-0 md:items-center text-2xl">
-				Check out our Github here:
+			<div className="flex flex-wrap justify-center pt-4 pl-3 md:pl-0 md:items-center text-2xl font-semibold">
+				Check out our <span className="text-[#03FCBA] mx-1.5">Github</span> here:
 				<a
 					href="https://www.github.com/AnkitJAbraham/Miniproject_VisualNovelGame"
 					className="pl-8 pt-1 md:mr-0 mr-9"
@@ -24,7 +24,9 @@ export default function Footer() {
 			</div>
 
 			<div className="flex flex-wrap space-y-4 md:space-y-0 md:flex-row justify-evenly md:items-center mt-8 w-2/3">
-				<div className="text-2xl -mt-1 pl-0 md:pl-10 italic [text-shadow:0_10px_20px_#E11447]">Developed by - </div>
+				<div className="text-2xl -mt-1 pl-0 md:pl-10 italic [text-shadow:0_10px_20px_#E11447] font-semibold">
+					Developed by -{' '}
+				</div>
 				<ul className="flex justify-between md:gap-0 gap-6">
 					<li className="transform hover:scale-110 hover:-rotate-3 transition duration-300 text-right">
 						{' '}
