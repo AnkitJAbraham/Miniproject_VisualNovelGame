@@ -4,9 +4,10 @@ import Reviews from '../components/Reviews';
 
 export default function Game() {
 	return (
-		<>
+		<div className="bg-black">
 			<ContainerBlock />
-            <Reviews />
-		</>
+			<div className='h-[10vh] invisible'></div>
+			<Reviews />
+		</div>
 	);
 }

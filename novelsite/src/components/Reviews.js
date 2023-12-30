@@ -60,7 +60,7 @@ export default function Reviews() {
 	}, []);
 
 	return (
-		<div className="flex flex-col justify-evenly md:h-auto h-[90dvh] md:gap-10 w-5/6 mx-auto py-4">
+		<div className="flex flex-col justify-evenly md:h-auto h-[92dvh] md:gap-10 w-5/6 mx-auto py-4">
 			<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7] ">
 				What Others Say About This!
 			</div>
@@ -69,7 +69,7 @@ export default function Reviews() {
 					{shuffledTestimonials.map((testimonial, index) => (
 						<div key={index} className="p-4 ">
 							<blockquote className="relative p-4 rounded-lg shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]">
-								<p className="text-xl mb-4 max-w-prose">{testimonial.text}</p>
+								<p className="text-xl mb-4 max-w-prose text-white">{testimonial.text}</p>
 								<footer className="text-right text-[#faebd7]">
 									- {testimonial.author}
 								</footer>
@@ -85,7 +85,7 @@ export default function Reviews() {
 					className="md:h-[40%] md:w-[40%] mx-auto"
 				/>
 			</div>
-            <div className='md:text-[0.5rem] text-[0.25rem] text-center'>
+            <div className='md:text-[0.5rem] text-[0.25rem] text-center text-white'>
 					Disclaimer: This image is solely intended to represent the 2023 Game
 					Of The Year Awards, and its presence on our website in no way implies,
 					claims, advertises, or falsely purports that our game, &ldquo;Merchant

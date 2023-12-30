@@ -5,11 +5,12 @@ export default function Game() {
 	return (
 		<>
 			<ContainerBlock />
-			<div className="flex flex-col h-[90dvh] md:w-5/6 justify-start gap-4 p-6 mx-auto">
+			<div className='h-[10vh] invisible'></div>
+			<div className="flex flex-col h-[90dvh] md:w-5/6 justify-start gap-4 p-6 mx-auto bg-black">
 				<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7]">
 					Demo
 				</div>
-				<div className="text-xl text-left md:text-2xl pt-2 p-6">
+				<div className="text-xl text-left md:text-2xl pt-2 p-6 text-white">
 					Try our game, rendered in the browser without any additional downloads
 					!
 				</div>

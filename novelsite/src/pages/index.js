@@ -9,26 +9,28 @@ const inter = Inter({subsets: ['latin']});
 
 export default function Home() {
 	return (
-		<>
+		<div className="md:bg-[url('/images/largebg.webp')] bg-black bg-cover bg-no-repeat bg-fixed">
+			<div className="max-[700px]:bg-[url('/images/mobilebg.webp')] relative z-50 bg-cover bg-no-repeat bg-fixed">
 			<ContainerBlock />
-			<div className="md:h-[92vh] flex flex-col items-center justify-center overflow-hidden md:bg-[url('/images/largebg.webp')] bg-[url('/images/mobilebg.webp')] bg-cover bg-no-repeat bg-fixed">
-				<div className="text-black text-center md:text-6xl text-3xl font-bold mt-4 h-1/2 min-h-">
+			<div className='h-[10vh] invisible'></div>
+			<div className="md:h-[92vh] h-full flex flex-col items-center justify-center overflow-hidden">
+				<div className="text-black text-center md:text-6xl text-3xl font-bold mt-4 h-1/2">
 					<div className="mb-8">
 						<p className="fade-in-text animated-delay-1">Presenting</p>
 						<p className="fade-in-text animated-delay-2">
 							The Game Of The Year
 						</p>
 					</div>
-					<div className="fade-in-text animated-delay-3 mb-2 md:bg-transparent bg-[#efefef] md:w-full w-5/6 mx-auto">
+					<div className="fade-in-text animated-delay-3 mb-2 md:bg-transparent rounded-xl bg-white/50 shadow-lg md:w-full w-5/6 mx-auto">
 						<div className="md:text-8xl max-[400px]:text-5xl text-6xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">
 							Merchant Of Venice
 						</div>
 					</div>
 				</div>
 				<div className="flex md:flex-row flex-col gap-8 text-[#E2E2E2] md:text-2xl text-xl font-bold bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black p-4 w-5/6 text-center my-4">
-					<div className="flex flex-col items-center justify-between basis-1/3 h-3/4 py-5 gap-12">
+					<div className="flex flex-col items-center justify-between basis-1/3 h-3/4 py-5 md:gap-12 gap-8">
 						<div>Try out the game in your browser itself!</div>
-						<div className='animate-bob'>
+						<div className="animate-bob">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="36"
@@ -48,9 +50,9 @@ export default function Home() {
 							</div>
 						</Link>
 					</div>
-					<div className="flex flex-col basis-1/3 gap-10 py-5">
+					<div className="flex flex-col basis-1/3 md:gap-12 gap-8 py-5">
 						<div>Check out the walkthrough video</div>
-						<div className='select-none'>
+						<div className="select-none">
 							<a href="https://www.youtube.com/watch?v=iZOCLmFYsNU">
 								<Image
 									src={videoimage}
@@ -60,9 +62,11 @@ export default function Home() {
 							</a>
 						</div>
 					</div>
-					<div className="flex flex-col items-center justify-between basis-1/3 h-3/4 py-5 gap-6">
-						<div>Skip the wait, <br/> Download Right Now !!</div>
-						<div className='animate-bob'>
+					<div className="flex flex-col items-center justify-between basis-1/3 h-3/4 py-5 md:gap-6 gap-8">
+						<div>
+							Skip the wait, <br /> Download Right Now !!
+						</div>
+						<div className="animate-bob">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="36"
@@ -83,9 +87,9 @@ export default function Home() {
 						</Link>
 					</div>
 				</div>
-			
 			</div>
-			{/* <Footer /> */}
-		</>
+			<Footer />
+			</div>
+		</div>
 	);
 }

@@ -5,8 +5,9 @@ import CharacterDetails from '../components/CharacterDetails';
 
 export default function About() {
 	return (
-		<>
+		<div className="bg-black">
 			<ContainerBlock />
+			<div className='h-[10vh] invisible'></div>
 			<div className="w-5/6 mx-auto text-white">
 				<div className="py-5 md:h-auto h-screen">
 					<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7]">
@@ -17,7 +18,8 @@ export default function About() {
 							Visual narrative games are video games that focus on storytelling
 							through visuals, using cutscenes, dialogue, and character
 							interactions to advance the narrative. They are based on the
-							visual novel genre of literature. <br className='block max-[400px]:hidden'/>
+							visual novel genre of literature.{' '}
+							<br className="block max-[400px]:hidden" />
 							<br />
 							<div className="hidden md:block">
 								A notable example is &quot;
@@ -30,13 +32,13 @@ export default function About() {
 								Interactive storytelling is a form of digital entertainment in
 								which the storyline is not predetermined.
 							</div>{' '}
-                            <br className='md:block hidden'/>
-                            <br className='block max-[400px]:hidden'/>
+							<br className="md:block hidden" />
+							<br className="block max-[400px]:hidden" />
 							<div>
 								The author creates the setting, characters, and situation which
 								the narrative must address, but the user (also reader or player)
-								experiences a unique story based on their interactions
-								and choices.
+								experiences a unique story based on their interactions and
+								choices.
 							</div>
 						</div>
 					</div>
@@ -79,6 +81,6 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

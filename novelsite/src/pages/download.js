@@ -5,8 +5,9 @@ export default function Download() {
 	return (
 		<>
 			<ContainerBlock />
+			<div className='h-[10vh] invisible'></div>
 			<div
-				className="md:w-5/6 md:h-[92dvh] h-[80dvh] flex flex-col justify-evenly mx-auto text-white"
+				className="md:w-5/6 md:h-[92dvh] h-[80dvh] flex flex-col justify-evenly mx-auto text-white bg-black"
 				id="download"
 			>
 				<div className="text-4xl font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7] md:text-left px-5 text-center">

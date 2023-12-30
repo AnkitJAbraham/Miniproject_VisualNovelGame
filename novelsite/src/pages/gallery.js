@@ -10,13 +10,14 @@ import image6 from '../../public/images/image6.webp';
 
 export default function Gallery() {
 	return (
-		<>
+		<div className="bg-black">
 			<ContainerBlock />
+			<div className='h-[10vh] invisible'></div>
 			<div className="md:w-5/6 mx-auto">
 				<div className="md:text-left text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7] py-6">
 					Some Gameplay Moments
 				</div>
-				<div className="grid md:grid-cols-2 grid-cols-1 gap-4 w-5/6 mx-auto my-10 select-none">
+				<div className="grid md:grid-cols-2 grid-cols-1 gap-4 md:w-5/6 mx-auto px-2 py-10 select-none">
 					<div className="md:col-span-2 col-span-1 md:w-3/4 mx-auto">
 						<Image
 							src={image1}
@@ -66,6 +67,6 @@ export default function Gallery() {
 				</div>
 			</div>
            
-		</>
+		</div>
 	);
 }
