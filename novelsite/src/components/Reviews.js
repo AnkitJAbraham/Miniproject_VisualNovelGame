@@ -25,6 +25,10 @@ const testimonials = [
 		author: 'Ankit John (Thicc And Handsome)',
 		text: 'Whoever created this game are the best programmers ever !!',
 	},
+	{
+		author: 'Adithya M (Long-haired Hardcore Gamer)',
+		text: "Only game that I bought legitimately, such that I'm a huge fan now",
+	},
 ];
 
 const shuffleArray = array => {
