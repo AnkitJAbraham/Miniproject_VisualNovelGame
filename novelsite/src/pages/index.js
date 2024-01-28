@@ -21,12 +21,12 @@ export default function Home() {
 								The <span className="text-[#03FCBA]">Game</span> Of The Year
 							</p>
 						</div>
-						<div className="basis-1/4 fade-in-text animated-delay-3 md:w-auto w-5/6 mx-auto bg-opacity-50 backdrop-filter backdrop-blur-7xl bg-white flex items-center justify-center">
+						<div className="basis-1/4 fade-in-text animated-delay-3 md:w-auto w-5/6 mx-auto bg-opacity-30 backdrop-filter backdrop-blur-7xl bg-white flex items-center justify-center">
 							<div className="md:whitespace-nowrap md:text-8xl text-6xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black ">
 								Merchant Of Venice
 							</div>
 						</div>
-						<div className="basis-1/2 flex items-center md:my-6 mx-auto md:w-3/4 mx-4">
+						<div className="basis-1/2 flex items-center md:my-6 mx-auto md:w-3/4 w-11/12 mx-4">
 							<div className=" bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black text-white text-lg p-4">
 								We, a group of B.Tech students from Rajagiri School of
 								Engineering and Technology, Kochi, present our Miniproject — an
@@ -35,10 +35,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black p-4 md:w-5/6 mx-4 text-[#e2e2e2] text-center md:text-xl text-lg flex flex-col gap-8 my-12">
-						<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7]">
+						<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7] md:p-4">
 							Overview
 						</div>
-						<div className="md:p-4 p-2">
+						<div className="md:p-4 p-2 text-white">
 							&ldquo;<span className="text-[#03FCBA]">Merchant of Venice</span>
 							&rdquo; is a riveting tale of love, betrayal, and justice set
 							against the backdrop of 16th-century{' '}
@@ -53,11 +53,11 @@ export default function Home() {
 							<span className="text-[#FF0054]">Portia</span>, a web of intricate
 							plots is spun.{' '}
 						</div>
-						<div className="md:p-4 p-2">
+						<div className="md:p-4 p-2 text-white">
 							Navigating through themes of prejudice, mercy, and the price of
 							vengeance, the characters grapple with complex moral dilemmas. The
-							film promises a visually stunning portrayal of Renaissance Venice
-							and the enchanting Belmont, where the fate of its characters
+							film promises a visually stunning portrayal of <span className="text-[#FF0054]">Renaissance Venice</span>
+							and the enchanting <span className="text-[#FF0054]">Belmont</span>, where the fate of its characters
 							intertwines in unexpected ways. With stellar performances,
 							breathtaking cinematography, and a modern take on
 							<span className="ml-1 text-[#FF0054]">Shakespeare</span>&apos;s
@@ -69,12 +69,12 @@ export default function Home() {
 							justice in this upcoming cinematic spectacle.
 						</div>
 					</div>
-					<div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black p-4 md:w-5/6 mx-4 mx-auto">
-						<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7]">
+					<div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black p-4 md:w-5/6 w-11/12 mx-4 mx-auto">
+						<div className="text-4xl md:text-left text-center font-extrabold leading-none tracking-tight md:text-5xl text-[#faebd7] md:p-4">
 							Walkthrough
 						</div>
-						<div className="flex md:flex-row flex-col">
-							<div className="select-none md:px-10 px-1 md:py-10 py-8 aspect-w-16 aspect-h-9">
+						<div className="flex md:flex-row flex-col gap-4">
+							<div className="select-none p-6 flex justify-center">
 								<iframe
 									src="https://www.youtube.com/embed/iZOCLmFYsNU"
 									title="Ren&#39;Py Miniproject-Merchant of Venice walkthrough full"
@@ -82,11 +82,11 @@ export default function Home() {
 									width="700"
 									height="400"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									allowfullscreen
-									className="md:rounded-3xl rounded h-[30vh] w-full"
+									allowFullScreen
+									className="md:rounded-3xl rounded-xl md:h-[50dvh] h-[30dvh] md:w-[40dvw]"
 								></iframe>
 							</div>
-							<div className="p-10 md:text-xl text-lg">
+							<div className="md:text-xl text-lg text-white md:p-10 md:text-left text-center">
 								Explore a comprehensive gameplay walkthrough video showcasing
 								every intricate detail of our captivating interactive visual
 								novel-based game, providing an immersive preview of the unique
